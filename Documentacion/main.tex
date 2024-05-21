@@ -1,0 +1,58 @@
+\documentclass{config-wokSH}
+\usepackage[spanish]{babel} % Idioma
+\input{packet}
+
+\usepackage[backend=biber,style=ieee]{biblatex}
+\addbibresource{bibliografia.bib}
+\nocite{*} % Añade todas las referencias de bib sin cita
+
+% -------------------------------------------------------/
+% ------------------------------------------------------/
+\begin{document}
+
+%\pagecolor{AzulRey}
+%\color{white}
+
+\pagestyle{body}
+\thispagestyle{firstpage}
+%% -----------------|
+%% ----------------|
+\input{portada}    %
+%\newpage
+%\tableofcontents
+%% ----------------|
+%% -----------------|
+
+%% --------------------------------------------|
+%% ----------  -------------|
+\newpage
+\input{secciones/intro.tex}
+%% ----------  -------------|
+%% --------------------------------------------|
+
+%% --------------------------------------------|
+%% ----------  -------------|
+\newpage
+%% ----------  -------------|
+%% --------------------------------------------|
+
+
+%% --------------------------------------------|
+%% ----------  -------------|
+\newpage
+%% ----------  -------------|
+%% --------------------------------------------|
+
+% ----------------------|
+% Referencias           |
+% pdflatex main.tex     |
+% biber main            |
+% pdflatex main.tex     |
+\newpage %              |
+\thispagestyle{refs}
+\printbibliography %    |
+% ----------------------|
+
+\end{document}
+% -----------------------------------------------------\
+% ------------------------------------------------------\

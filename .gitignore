@@ -1,0 +1,11 @@
+## Ignorar ajustes de vscode
+.vscode
+
+## Ignorar los archivos generados por la compilación de LaTex
+Documentacion/main.aux
+Documentacion/main.bbl
+Documentacion/main.bcf
+Documentacion/main.blg
+Documentacion/main.log
+Documentacion/main.out
+Documentacion/main.run.xml

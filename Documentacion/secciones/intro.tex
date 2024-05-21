@@ -1,0 +1,161 @@
+\section{Desarrollo del Proyecto}
+
+Nuestra propuesta se centra en el desarrollo de un sistema de inteligencia artificial capaz 
+de generar poesía personalizada, reflejando los estilos, emociones y temas preferidos por 
+cada usuario. Este sistema será una herramienta para aquellos que buscan explorar nuevas 
+formas de arte literario y expandir su propia creatividad a través de la colaboración con la IA.\\
+
+Queremos facilitar la creación de poesía mediante el uso de tecnología avanzada, ofreciendo a 
+los usuarios la posibilidad de recibir poemas personalizados. El proyecto se enfocará en dos 
+categorías principales de poesía, garantizando que el contenido generado sea relevante y de 
+alta calidad.
+
+\begin{itemize}
+    \item Crear un sistema de generación de poesía automática: Incorporar diferentes estilos 
+    literarios en la generación de poesía, asegurando variedad y riqueza en el contenido.
+
+    \item Aplicar técnicas de procesamiento de lenguaje natural y aprendizaje automático: 
+    Modelar patrones poéticos y adaptar la generación de contenido a las preferencias del 
+    usuario, permitiendo una experiencia más personalizada.
+
+    \item Comprender la importancia de un proceso correcto de datos para analizar todo el contenido
+    en un poema y poder usarlo para que nuestro modelo aprenda y pueda generar el contenido nuevo. 
+\end{itemize}
+
+% -------------------------------------------------------------------------------------------\
+% -------------------------------------------------------------------------------------------\
+\subsection{Bases Teoricas}
+% -------------------------------------------------------------------------------------------\
+% -------------------------------------------------------------------------------------------\
+
+
+% -------------------------------------------------------------------------------------------\
+\subsubsection*{Redes Neuronales}
+% -------------------------------------------------------------------------------------------\
+
+Una red neuronal es un modelo computacional inspirado en la estructura y funcionamiento del 
+cerebro humano. Está compuesta por nodos interconectados llamados neuronas artificiales, 
+organizados en capas que procesan y transmiten información. Cada neurona recibe entradas, las 
+procesa mediante una función de activación y luego transmite la salida a las neuronas de la capa 
+siguiente. Esto permite que las redes neuronales aprendan patrones complejos y realicen tareas 
+como reconocimiento de patrones, clasificación de datos y predicción.
+
+\begin{itemize}
+    \item Las redes neuronales utilizan una técnica de aprendizaje automático llamada aprendizaje 
+    automático supervisado para adaptarse y aprender nuevas tareas.
+    \item Pueden representar información proporcionada durante la etapa de aprendizaje.
+    \item Dado que las redes neuronales pueden calcular datos en paralelo, las máquinas con 
+    arquitectura de redes neuronales trabajan más rápido para proporcionar resultados
+    \item Si una red neuronal está parcialmente dañada, puede provocar una caída en el 
+    rendimiento; sin embargo, la red neuronal puede conservar algunas de sus propiedades 
+    incluso cuando está dañada
+\end{itemize}
+
+% -------------------------------------------------------------------------------------------\
+\subsubsection*{Ajuste de hiperparámetros y selección de modelo}
+% -------------------------------------------------------------------------------------------\
+
+
+Imaginemos que vamos a jugar un torneo de cartas, tenemos dos equipos para elegir jugar:
+\begin{enumerate}
+    \item Equipo $\alpha$ conformado por jugadores con experiencia en las cartas
+    \item Equipo $\beta$ conformado por jugadores más novatos pero con habilidades en matemáticas
+\end{enumerate}
+
+Con que equipo nos quedamos? Primero, vamos a probar ambos equipos en diferentes partidas y 
+evaluaremos cómo se desempeñan en términos de estrategia y habilidades matemáticas. Tras varias 
+partidas, notas que el equipo de $\alpha$ tiene una ventaja clara en la toma de decisiones durante 
+el juego, pero el equipo $\beta$ tiene una mejor comprensión de las probabilidades y las 
+estadísticas del juego.\\
+
+Aquí es donde entra el ajuste de hiperparámetros. Vamos a ajustar la estrategia del equipo 
+$\alpha$ para que sea más cauteloso y evite riesgos innecesarios. Pero al equipo $\beta$ le 
+haremos un ajuste para equilibrar su enfoque analítico y hacer decisiones más intuitivas y rápidas.\\ 
+
+Después de ajustar ambos equipos, y hacer pruebas, notamos como el equipo $\alpha$ sigue siendo sólido, 
+pero $\beta$ ha mejorado su capacidad para adaptarse a situaciones cambiantes durante el juego.\\ 
+
+Aquí es donde entra la validación de exclusión y la validación cruzada. Guardamos algunas partidas 
+para evaluar nuevamente a ambos equipos después de los ajustes. Al hacer esto, podemos asegurar de 
+que los cambios realizados si mejoran el rendimiento de los equipos y no son temporales o un golpe 
+de suerte en una única prueba.\\ 
+
+Finalmente la elección del equipo deberá estar basada en quien ha demostrado una mejora constante y 
+sólida en todas las evaluaciones, solo así podremos estar seguros de jugar el torneo.
+
+
+% -------------------------------------------------------------------------------------------\
+% -------------------------------------------------------------------------------------------\
+\subsubsection*{Mecanismo de las Redes Neuronales Recurrentes (RNNs)}
+% -------------------------------------------------------------------------------------------\
+% -------------------------------------------------------------------------------------------\
+
+
+Las redes neuronales recurrentes (RNNs) son un tipo especial de red neuronal que se utiliza 
+principalmente para datos secuenciales, como texto o series temporales. Lo que las hace especiales 
+es su capacidad para mantener información a lo largo del tiempo, lo que les permite aprender 
+patrones en secuencias de datos.
+
+\begin{center}
+    Componentes de una RNN
+\end{center}
+
+\textbf{Memoria y Bucles:} Las RNNs tienen una memoria interna que les permite recordar la 
+información anterior en la secuencia. Esto se logra mediante la conexión en bucle dentro de las 
+neuronas, lo que permite que la información persista.\\
+
+\textbf{Capa Recurrente}: Esta es la capa central de una RNN. A diferencia de las redes neuronales 
+tradicionales, cada neurona en esta capa no solo recibe la entrada actual, sino que también 
+recibe información de la entrada anterior. Esto se logra mediante una conexión recurrente 
+que permite a la red recordar información a lo largo del tiempo.\\ 
+
+Como ejemplo imaginemos que vamos a leer una historia. Cada palabra que lees se añade a tu 
+comprensión de la trama. De manera similar, una RNN procesa una palabra a la vez, y cada 
+nueva palabra se añade a su \textit{memoria} de las palabras anteriores.\\ 
+
+\textbf{Proceso de una RNN}
+
+\begin{enumerate}
+    \item Entrada Secuencial: La RNN toma una secuencia de datos como entrada. Por ejemplo, 
+    una oración dividida en palabras.
+    \item Propagación de la Información: A medida que cada palabra se procesa, la RNN actualiza 
+    su estado interno (su "memoria") basado en la palabra actual y el estado anterior.
+    \item Salida Secuencial: La RNN puede generar una salida en cada paso, por ejemplo, 
+    predecir la siguiente palabra en una oración.
+\end{enumerate}
+
+
+% -------------------------------------------------------------------------------------------\
+% -------------------------------------------------------------------------------------------\
+\subsection{Estrategia del proyecto}
+% -------------------------------------------------------------------------------------------\
+% -------------------------------------------------------------------------------------------\
+
+\begin{enumerate}
+    \item Recopilación de Poemas: Juntamos una serie de poemas en dos categorías: amor y tristeza. 
+    Son dos porque nos permite enfocarnos en como debe ser el procesamiento y extraer las mejores
+    caracteristicas para entrenar el modelo. Estos datos han sido almacenados en un archivo .json. 
+    
+    \item Pre-procesamiento de Datos: Debemos hacer una limpieza de los datos
+    
+    \item Desarrollo de Modelos
+    
+    \begin{itemize}
+        \item El primer modelo lo queremos entrenar para que pueda aprender 
+        y clasificar nuestros dos categorías de poemas utilizando técnicas de procesamiento de 
+        lenguaje natural y aprendizaje automático
+
+        \item El segundo modelo es para decirle al al algoritmo como se conforma un poema y como 
+        esperamos que nos devuelva el resultado
+
+        \item Finalmente el tercer modelo será entreando para que pueda tomar lo aprendido de los
+        dos modelos de arriba y pueda construir un poema nuevo. Hasta el momento no hemos considerado
+        más variables que pueda influir en la creación de modelo pero es muy posible que se integren.
+    \end{itemize}
+    
+    \item Personalización: Implementación de funcionalidades que permitan a los usuarios influir 
+    en el estilo y contenido de la poesía generada, adaptándose a sus preferencias y emociones.
+
+    \item Evaluación y Mejora: Desarrollo de métricas para evaluar la calidad poética y realizar ajustes 
+    basados en la retroalimentación de los usuarios.
+\end{enumerate}

@@ -1,0 +1,11 @@
+python versión: Python 3.10.12
+
+instalar: 
+
+pip install absl-py
+pip install rich
+pip install numpy
+pip install nltk
+pip install keras
+pip install tensorflow
+pip install scikit-learn
