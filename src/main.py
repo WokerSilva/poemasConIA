@@ -16,19 +16,20 @@ def main():
     
     # Imprimir las categorías disponibles
     categorias = encoder.classes_
-    print(f'Categorías disponibles: {categorias}')
+    print(f'Categorías existentes: {categorias}')
 
     # Hacer una predicción con el modelo RNN
     nuevo_poema = "llueve en mi alma una tormenta sin fin..."
     print(f'Predicción para el nuevo poema: {hacer_predicciones(modelo_rnn, nuevo_poema, tokenizer, encoder)}')
 
     # Generar un nuevo poema
-    print("Nuevo poema .. cargando .. ")
+    print("cargando...")
     modelo_rnn, tokenizer, encoder = cargar_modelo_y_datos('modelo_poemas_rnn.keras', 'tokenizer.npy', 'encoder.npy')
-    nuevo_poema_generado = generar_poema(modelo_rnn, tokenizer, encoder)
+    estructura_poema = [(4, 8), (4, 6), (4, 8)]  # Estructura del poema
+    nuevo_poema_generado = generar_poema(modelo_rnn, tokenizer, encoder, estructura_poema)
     print(f'Nuevo poema generado: {nuevo_poema_generado}')
     
-    # Extraer palabras relevantes de los datos de entrenamiento
+    # Extraer palabras relevantes del conjunto de datos de entrenamiento
     palabras_relevantes = extraer_palabras_relevantes(tokenizer)
     print(f'Palabras relevantes: {palabras_relevantes}')
 
