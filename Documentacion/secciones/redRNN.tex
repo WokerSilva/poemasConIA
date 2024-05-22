@@ -1,0 +1,86 @@
+\section{Red RNN}
+
+\begin{itemize}
+    \item Carga de Datos: La función \texttt{cargar poemas limpios} lee el archivo JSON
+    generado en el paso anterior con todos los poemas ya limpios.    
+\end{itemize}
+
+\begin{center}
+    Preprocesamiento de Texto
+\end{center}
+
+\begin{itemize}
+    \item Tokenización: El Tokenizer convierte el texto en secuencias de enteros, donde 
+    cada entero representa una palabra única en el corpus.
+
+    \item Padding: \texttt{pad sequences} se utiliza para asegurar que todas las secuencias 
+    tengan la misma longitud rellenando con ceros las secuencias más cortas.
+
+    \item Codificación de Categorías: Las categorías de los poemas se codifican en 
+    enteros y luego se convierten en vectores binarios (one-hot encoding) para que 
+    puedan ser utilizadas en la clasificación.
+\end{itemize}
+
+\begin{center}
+    Construcción del Modelo RNN
+\end{center}
+
+\begin{itemize}
+    \item Embedding: La capa de Embedding transforma los enteros de las palabras en vectores 
+    densos de un tamaño especificado (100 en este caso).
+
+    \item LSTM Bidireccional: Las capas Bidirectional LSTM permiten que la red aprenda 
+    dependencias en ambas direcciones (pasado y futuro) dentro de la secuencia.
+
+    \item Dropout: Se utiliza para reducir el sobreajuste al \textit{apagar} aleatoriamente 
+    algunas neuronas durante el entrenamiento.
+
+    \item Dense: La capa Dense al final se utiliza para la clasificación, con una activación 
+    softmax para obtener probabilidades de las categorías.
+
+    \item Compilación y Entrenamiento: El modelo se compila con un optimizador adam y una 
+    función de pérdida \texttt{categorical crossentropy}, adecuada para clasificación multiclase.
+    Luego, se entrena con los datos de entrada y las categorías codificadas.
+
+    \item Evaluación del Modelo: Después del entrenamiento, el modelo se evalúa con los mismos 
+    datos para obtener métricas como precisión y recall.    
+\end{itemize}
+
+\begin{center}
+    Guardado del Modelo
+\end{center}
+
+La línea 
+\begin{verbatim}
+modelo_rnn.save('modelo_poemas_rnn.keras')    
+\end{verbatim}
+
+es responsable de guardar el modelo entrenado
+
+\begin{enumerate}
+    \item Guardar la Arquitectura del Modelo: La estructura completa del modelo, incluyendo la 
+    configuración de cada capa (como las capas LSTM bidireccionales y las capas de Dropout), 
+    se guarda en el archivo.
+
+    \item Guardar los Pesos del Modelo: Los pesos son los valores aprendidos durante el 
+    entrenamiento del modelo. Estos son cruciales ya que contienen la información que el modelo 
+    ha aprendido sobre los patrones de texto en los poemas.
+
+    \item Guardar la Configuración de Entrenamiento: Esto incluye la función de pérdida, el 
+    optimizador y cualquier otra métrica que se haya definido durante la compilación del modelo.
+
+    \item Guardar el Estado del Optimizador: Esto permite reanudar el entrenamiento desde donde 
+    se dejó sin perder el \textit{momentum} que el optimizador ha acumulado.
+\end{enumerate}
+
+El archivo resultante, es un archivo binario que contiene toda la información necesaria para 
+recrear el modelo exactamente como estaba en el momento de guardar. Esto significa que 
+puedes cargar el modelo más tarde (incluso en una máquina diferente) y usarlo para hacer 
+predicciones o continuar el entrenamiento. El formato .\textit{keras} es específico de la 
+biblioteca Keras y es una forma conveniente de guardar modelos de TensorFlow, ya que Keras 
+está integrado en TensorFlow.\\ 
+
+
+Este proceso es típico en el aprendizaje automático y el procesamiento del lenguaje natural 
+(NLP) para tareas de generación de texto. El modelo aprende a predecir la siguiente palabra en 
+una secuencia, lo que permite generar texto palabra por palabra.\\

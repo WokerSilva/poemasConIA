@@ -1,0 +1,16 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Desarrollo del Proyecto}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Bases Teoricas}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Estrategia del proyecto}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Limpieza de datos}{5}{section.2}%
+\contentsline {section}{\numberline {3}Modelo de entrenamiento}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Modelo capas LSTM}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Función: Entrenar RNN}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Función: Evaluar Modelo}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Matriz de Confusión}{7}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Red RNN}{9}{section.4}%
+\contentsline {section}{\numberline {5}Generación de Poemas}{11}{section.5}%
+\contentsline {subsection}{\numberline {5.1}BERT (Bidirectional Encoder Representations from Transformers)}{11}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Redes Neuronales Recurrentes (RNN)}{11}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Fusión de BERT y RNN para la Generación de Texto}{11}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Aplicaciones y Resultados}{12}{subsection.5.4}%

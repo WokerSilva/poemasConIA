@@ -9,3 +9,10 @@ pip install nltk
 pip install keras
 pip install tensorflow
 pip install scikit-learn
+pip install matplotlib
+pip install seaborn
+pip install transformers
+pip install torch
+pip install tf-keras
+pip install accelerate
+pip install datasets

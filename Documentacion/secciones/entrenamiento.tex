@@ -4,36 +4,47 @@
 % -------------------------------------------------------------------------------------
 \subsection{Modelo capas LSTM}
 % -------------------------------------------------------------------------------------
-%% Explicar la teoría del modelo
+Las Redes Neuronales Recurrentes (RNN) son adecuadas para manejar datos secuenciales, como texto. Las capas LSTM (Long Short-Term Memory) son una variante de las RNN que permiten aprender dependencias a largo plazo, superando problemas como el desvanecimiento del gradiente.
+
+Nuestro modelo utiliza capas LSTM bidireccionales, que procesan la secuencia en ambas direcciones, y capas de Dropout, que reducen el sobreajuste. Una capa de embedding convierte los enteros que representan palabras en vectores densos de tamaño fijo, y una capa densa final con activación softmax clasifica las categorías de poemas.
+
 % -------------------------------------------------------------------------------------
-
-
-
 % -------------------------------------------------------------------------------------
+\subsection{Función: Entrenar RNN}
 % -------------------------------------------------------------------------------------
-\subsection{Función: Entrena RNN}
-% -------------------------------------------------------------------------------------
-%% Explicar el código y teoria de la función entrna_rnn 
-%%  src/entrenaRNN.py
-% -------------------------------------------------------------------------------------
+La función \texttt{entrenar\_rnn} carga datos de poemas limpios, los preprocesa y entrena un modelo RNN con capas LSTM.
 
+Primero, se cargan los datos de poemas limpios desde un archivo JSON. Cada poema se tokeniza, convirtiendo las palabras en números enteros únicos. Luego, se codifican las categorías de los poemas en formato one-hot.
 
+Las secuencias de texto se ajustan para tener la misma longitud mediante padding. El modelo RNN se define con capas de embedding, LSTM bidireccionales y Dropout. Se compila utilizando el optimizador Adam y la función de pérdida \texttt{categorical\_crossentropy}.
 
+El modelo se entrena con un 20\% de los datos reservados para la validación y se guarda en el disco. Finalmente, se evalúa el modelo utilizando la función \texttt{evaluar\_modelo}.
 
 % -------------------------------------------------------------------------------------
 % -------------------------------------------------------------------------------------
 \subsection{Función: Evaluar Modelo}
 % -------------------------------------------------------------------------------------
-%% Explicar el código y teoria de la función evaluar_modelo 
-%%  src/entrenaRNN.py
-% -------------------------------------------------------------------------------------
+La función \texttt{evaluar\_modelo} evalúa el rendimiento del modelo RNN entrenado, calculando métricas como pérdida, precisión, precisión por clase y exhaustividad.\\
 
-
+Las predicciones del modelo se comparan con las etiquetas verdaderas para generar una matriz de confusión y un reporte de clasificación. La matriz de confusión visualiza el desempeño del modelo mostrando el número de predicciones correctas e incorrectas para cada clase. Esto ayuda a identificar problemas específicos y evaluar la precisión y exhaustividad del modelo en diferentes categorías.
 
 % -------------------------------------------------------------------------------------
 % -------------------------------------------------------------------------------------
 \subsection{Matriz de Confusión}
 % -------------------------------------------------------------------------------------
-%% Explicar la teoría de como funciona (breve) y como nos ayuda en la evaluación
-%%  src/entrenaRNN.py
+La matriz de confusión es una herramienta fundamental en la evaluación de modelos de clasificación. Cada fila de la matriz representa las instancias de una clase real, mientras que cada columna representa las instancias de una clase predicha.\\
+
+Este análisis ayuda a identificar problemas de confusión entre clases específicas y a evaluar la precisión y la exhaustividad del modelo en diferentes categorías. El análisis se complementa con un reporte de clasificación, que proporciona métricas detalladas como precisión, exhaustividad y F1-score para cada clase.
+
 % -------------------------------------------------------------------------------------
+% -------------------------------------------------------------------------------------
+\subsubsection*{Resultados}
+% -------------------------------------------------------------------------------------
+\begin{itemize}
+    \item \textbf{Pérdida (Loss):} El valor de pérdida obtenido después del entrenamiento del modelo es de X, indicando la cantidad de error en las predicciones.
+    \item \textbf{Precisión (Accuracy):} La precisión del modelo es del Y\%, lo que significa que el modelo clasifica correctamente el Z\% de los poemas en el conjunto de prueba.
+    \item \textbf{Precisión por clase (Precision):} La precisión por clase varía según la categoría, indicando la proporción de verdaderos positivos entre el total de predicciones positivas realizadas por el modelo para cada clase.
+    \item \textbf{Exhaustividad (Recall):} La exhaustividad varía según la categoría, indicando la proporción de verdaderos positivos entre el total de instancias reales de cada clase.
+    \item \textbf{Matriz de Confusión:} La matriz de confusión muestra el desempeño del modelo para cada categoría, visualizando las predicciones correctas e incorrectas.
+    \item \textbf{Reporte de Clasificación:} El reporte de clasificación detalla las métricas de precisión, recall y F1-score para cada categoría, proporcionando una evaluación exhaustiva del rendimiento del modelo.
+\end{itemize}

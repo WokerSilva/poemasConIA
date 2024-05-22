@@ -1,14 +1,9 @@
 \section{Desarrollo del Proyecto}
 
 Nuestra propuesta se centra en el desarrollo de un sistema de inteligencia artificial capaz 
-de generar poesía personalizada, reflejando los estilos, emociones y temas preferidos por 
-cada usuario. Este sistema será una herramienta para aquellos que buscan explorar nuevas 
-formas de arte literario y expandir su propia creatividad a través de la colaboración con la IA.\\
-
-Queremos facilitar la creación de poesía mediante el uso de tecnología avanzada, ofreciendo a 
-los usuarios la posibilidad de recibir poemas personalizados. El proyecto se enfocará en dos 
-categorías principales de poesía, garantizando que el contenido generado sea relevante y de 
-alta calidad.
+de generar poesía usando datos entrenados. Este sistema será una herramienta para aquellos 
+que buscan explorar nuevas ideas de presentación y escritura abriendo paso a la creatividad 
+a través de la colaboración con la IA.
 
 \begin{itemize}
     \item Crear un sistema de generación de poesía automática: Incorporar diferentes estilos 
@@ -27,7 +22,6 @@ alta calidad.
 \subsection{Bases Teoricas}
 % -------------------------------------------------------------------------------------------\
 % -------------------------------------------------------------------------------------------\
-
 
 % -------------------------------------------------------------------------------------------\
 \subsubsection*{Redes Neuronales}
@@ -143,19 +137,14 @@ nueva palabra se añade a su \textit{memoria} de las palabras anteriores.\\
     \begin{itemize}
         \item El primer modelo lo queremos entrenar para que pueda aprender 
         y clasificar nuestros dos categorías de poemas utilizando técnicas de procesamiento de 
-        lenguaje natural y aprendizaje automático
+        lenguaje natural y aprendizaje automático        
 
-        \item El segundo modelo es para decirle al al algoritmo como se conforma un poema y como 
-        esperamos que nos devuelva el resultado
-
-        \item Finalmente el tercer modelo será entreando para que pueda tomar lo aprendido de los
-        dos modelos de arriba y pueda construir un poema nuevo. Hasta el momento no hemos considerado
-        más variables que pueda influir en la creación de modelo pero es muy posible que se integren.
-    \end{itemize}
-    
-    \item Personalización: Implementación de funcionalidades que permitan a los usuarios influir 
-    en el estilo y contenido de la poesía generada, adaptándose a sus preferencias y emociones.
+        \item Este segundo modelo será entreando para que pueda procesar los datos ya entrenados
+        y pasandole parte de la estructura del poema pueda construir una nueva versión. Hasta 
+        el momento no hemos considerado más variables que pueda influir en la creación de 
+        modelo pero es muy posible que se integren.
+    \end{itemize}    
 
     \item Evaluación y Mejora: Desarrollo de métricas para evaluar la calidad poética y realizar ajustes 
-    basados en la retroalimentación de los usuarios.
+    basados en la retroalimentación de las pruebas realizadas.
 \end{enumerate}

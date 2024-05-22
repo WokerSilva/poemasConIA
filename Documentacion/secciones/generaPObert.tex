@@ -1,0 +1,43 @@
+\section{Generación de Poemas}
+
+\subsection{BERT (Bidirectional Encoder Representations from Transformers)}
+
+BERT, desarrollado por Google, es un modelo de lenguaje basado en la arquitectura Transformer, diseñado para entender el contexto bidireccional en el procesamiento del lenguaje natural. A diferencia de los modelos unidireccionales, que leen el texto de izquierda a derecha o de derecha a izquierda, BERT lee el texto en ambas direcciones simultáneamente. Esto permite una comprensión más profunda del contexto de cada palabra en una oración.
+
+\subsubsection*{Tokenización y Preprocesamiento}
+Para utilizar BERT, primero es necesario tokenizar el texto de entrada. La tokenización divide el texto en tokens, que son las unidades básicas que el modelo procesará. BERT utiliza una técnica de tokenización llamada WordPiece, que segmenta palabras desconocidas en subpalabras conocidas, permitiendo que el modelo maneje un vocabulario más manejable y eficiente.
+
+\subsubsection*{Generación de Texto}
+En la generación de texto con BERT, el modelo se usa para predecir palabras enmascaradas en una secuencia de entrada, generando texto coherente basado en el contexto proporcionado. Este proceso implica codificar el texto de entrada en tokens, procesarlos a través del modelo BERT y decodificar los tokens generados para obtener el texto final.
+
+\subsection{Redes Neuronales Recurrentes (RNN)}
+
+Las RNN son una clase de redes neuronales diseñadas para manejar datos secuenciales, como texto o series temporales. En particular, las LSTM (Long Short-Term Memory) y las GRU (Gated Recurrent Unit) son variantes de RNN que abordan el problema de los gradientes desvanecidos, permitiendo que el modelo recuerde información a largo plazo.
+
+\subsubsection*{Tokenización y Secuencias}
+Para entrenar una RNN en la generación de texto, primero se convierte el texto en secuencias de números, donde cada número representa una palabra o token. Estas secuencias se utilizan para entrenar el modelo a predecir la siguiente palabra en una secuencia dada, basándose en las palabras anteriores.
+
+\subsubsection*{Entrenamiento y Generación de Texto}
+El entrenamiento de una RNN implica alimentar secuencias de texto al modelo y ajustar sus pesos para minimizar el error en la predicción de la siguiente palabra. Una vez entrenado, el modelo puede generar texto comenzando con una secuencia de entrada y prediciendo iterativamente las palabras siguientes.
+
+\subsection{Fusión de BERT y RNN para la Generación de Texto}
+
+\subsubsection*{Inicialización del Texto con BERT}
+El proceso de generación de texto comienza utilizando BERT para generar un texto inicial basado en un verso dado. BERT se encarga de proporcionar un contexto coherente y rico, generando una secuencia inicial que sirve como entrada para la RNN.
+
+\subsubsection*{Extensión del Texto con RNN}
+Una vez generado el texto inicial con BERT, se utiliza una RNN para extender el texto. La RNN toma la secuencia generada por BERT y predice iterativamente las palabras siguientes, basándose en el contexto proporcionado por las palabras anteriores.
+
+\subsubsection*{Ventajas de la Fusión}
+La combinación de BERT y RNN aprovecha las fortalezas de ambos modelos. BERT proporciona una comprensión profunda del contexto bidireccional, mientras que la RNN maneja la generación secuencial de texto, permitiendo una extensión coherente y fluida del verso inicial. Esta fusión resulta en un sistema de generación de texto más potente y preciso, capaz de producir poemas y otros tipos de textos creativos de alta calidad.
+
+\subsection{Aplicaciones y Resultados}
+Esta metodología se aplica en el entrenamiento y generación de poemas. El proceso comienza con la limpieza y preprocesamiento de los poemas, seguido del entrenamiento de la RNN generativa. Finalmente, se utiliza el modelo entrenado junto con BERT para generar nuevos poemas, demostrando la eficacia y creatividad del enfoque.
+
+\begin{itemize}
+    \item \textbf{Inicialización:} Se utiliza BERT para generar un verso inicial basado en un input dado.
+    \item \textbf{Generación:} La RNN toma el verso inicial y lo extiende, generando nuevas palabras secuencialmente.
+    \item \textbf{Resultados:} El poema generado combina la coherencia contextual de BERT con la fluidez secuencial de la RNN, resultando en un texto creativo y cohesivo.
+\end{itemize}
+
+Este enfoque híbrido representa un avance significativo en la generación automática de texto, combinando lo mejor de ambos mundos: la comprensión contextual profunda de BERT y la capacidad de generación secuencial de las RNN.
