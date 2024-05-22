@@ -7,7 +7,7 @@
 %% Explicar el diseño del formato .json
 % -------------------------------------------------------------------------------------
 
-
+% Puedes explicar aquí cómo está estructurado el archivo JSON que utilizas para almacenar los poemas.
 
 % -------------------------------------------------------------------------------------
 % -------------------------------------------------------------------------------------
@@ -17,13 +17,101 @@
 %%% src/limpiaPoemas.py 
 % -------------------------------------------------------------------------------------
 
-% Cargar los datos
-% Convertir a minúsculas
-% Eliminar caracteres especiales
-% Eliminar acentos
-% Eliminar espacios extra
-% Tokenizar % profundizar un poco más esta parte
-% Eliminar palabras vacías
-% Limpiar contenido
-% Guardar los datos limpios
-% Función principal
+A continuación, se describe el proceso de limpieza de los poemas utilizando Python. El código fuente se encuentra en el archivo \texttt{src/limpiaPoemas.py}.
+
+\begin{itemize}
+    \item \textbf{Cargar los datos:} Se utiliza la función \texttt{cargar\_poemas} para cargar los datos desde un archivo JSON. Esta función abre el archivo en modo lectura y utiliza \texttt{json.load} para leer y convertir el contenido del archivo JSON en un diccionario de Python.
+    
+    \begin{verbatim}
+def cargar_poemas(poemas_json):
+    with open(poemas_json, 'r', encoding='utf-8') as archivo:
+        poemas = json.load(archivo)
+    return poemas
+    \end{verbatim}
+
+    \item \textbf{Convertir a minúsculas:} La función \texttt{convertir\_minusculas} convierte todo el texto a minúsculas. Esto es esencial para normalizar el texto y facilitar la comparación de palabras.
+    
+    \begin{verbatim}
+def convertir_minusculas(texto):
+    return texto.lower()
+    \end{verbatim}
+
+    \item \textbf{Eliminar caracteres especiales:} La función \texttt{eliminar\_caracteres\_especiales} elimina los caracteres especiales del texto utilizando una expresión regular. Esto ayuda a limpiar el texto de símbolos no deseados que pueden interferir con el procesamiento.
+    
+    \begin{verbatim}
+def eliminar_caracteres_especiales(texto):
+    return re.sub(r'[^\w\s]', '', texto)
+    \end{verbatim}
+
+    \item \textbf{Eliminar acentos:} La función \texttt{eliminar\_acentos} normaliza el texto eliminando acentos para que las palabras con y sin acentos se traten por igual.
+    
+    \begin{verbatim}
+def eliminar_acentos(texto):
+    forma_nfkd = unicodedata.normalize('NFKD', texto)
+    return "".join([c for c in forma_nfkd if not unicodedata.combining(c)])
+    \end{verbatim}
+
+    \item \textbf{Eliminar espacios extra:} La función \texttt{eliminar\_espacios\_extra} reduce múltiples espacios a un solo espacio, mejorando la consistencia del texto.
+    
+    \begin{verbatim}
+def eliminar_espacios_extra(texto):
+    return " ".join(texto.split())
+    \end{verbatim}
+
+    \item \textbf{Tokenizar:} La función \texttt{tokenizar} divide el texto en una lista de palabras (tokens). Esto es útil para el análisis y procesamiento del texto.
+    
+    \begin{verbatim}
+def tokenizar(texto):
+    return texto.split()
+    \end{verbatim}
+
+    \item \textbf{Eliminar palabras vacías:} Las palabras vacías (stopwords) son palabras comunes que no aportan mucho significado. La función \texttt{eliminar\_palabras\_vacias} elimina estas palabras de la lista de tokens para centrarse en las palabras significativas.
+    
+    \begin{verbatim}
+palabras_vacias = set(stopwords.words('spanish'))
+
+def eliminar_palabras_vacias(tokens):
+    return [palabra for palabra in tokens if palabra not in palabras_vacias]
+    \end{verbatim}
+
+    \item \textbf{Limpiar contenido:} La función \texttt{limpiar\_contenido} aplica todas las funciones de limpieza en orden, transformando el texto en un formato limpio y normalizado.
+    
+    \begin{verbatim}
+def limpiar_contenido(contenido):
+    contenido = convertir_minusculas(contenido)
+    contenido = eliminar_caracteres_especiales(contenido)
+    contenido = eliminar_acentos(contenido)
+    contenido = eliminar_espacios_extra(contenido)
+    tokens = tokenizar(contenido)
+    tokens = eliminar_palabras_vacias(tokens)
+    return " ".join(tokens)
+    \end{verbatim}
+
+    \item \textbf{Guardar los datos limpios:} La función \texttt{guardar\_poemas} guarda los poemas limpios en un nuevo archivo JSON.
+    
+    \begin{verbatim}
+def guardar_poemas(poemas, poemas_json):
+    with open(poemas_json, 'w', encoding='utf-8') as archivo:
+        json.dump(poemas, archivo, ensure_ascii=False, indent=4)
+    \end{verbatim}
+
+    \item \textbf{Función principal:} La función \texttt{limpiar\_poemas} carga, limpia y guarda los poemas. Primero, carga los poemas del archivo de entrada. Luego, limpia cada poema utilizando \texttt{limpiar\_contenido}. Finalmente, guarda los poemas limpios en el archivo de salida.
+    
+    \begin{verbatim}
+def limpiar_poemas(archivo_entrada, archivo_salida):
+    poemas = cargar_poemas(archivo_entrada)
+    poemas_limpios = []
+
+    for item in poemas:
+        contenido_limpio = limpiar_contenido(item["contenido"])
+        poemas_limpios.append({
+            "categoria": item["categoria"],
+            "autor": item["autor"],
+            "titulo": item["titulo"],
+            "contenido": contenido_limpio
+        })
+
+    guardar_poemas(poemas_limpios, archivo_salida)
+    \end{verbatim}
+
+\end{itemize}
