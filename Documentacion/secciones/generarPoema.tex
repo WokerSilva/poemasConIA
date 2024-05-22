@@ -43,3 +43,77 @@
 % ------------------------------------------------------------------------------------------ %
 % ------------------------------------------------------------------------------------------ %
 
+\begin{center}
+    Cargar modelo y datos
+\end{center}
+
+Esta primer función en el archivo python para generar el poema carga los componentes antes 
+de generar texto, se cargar el modelo entrenado y las herramientas de preprocesamiento 
+(tokenizer y encoder) que se utilizaron durante el entrenamiento. Esto asegura que el texto 
+de entrada se procese de la misma manera que los datos de entrenamiento\\
+
+Una vez cargado el modelo, (tokenizer, encoder), facilita la generación de texto porque proporciona 
+estos componentes esenciales al resto del código, como las funciones \texttt{generar verso, generar 
+estrofa}, y \texttt{generar poema}\\ 
+
+\begin{itemize}
+    \item modelo (\texttt{modelo poemas rnn keras}): Modelo de aprendizaje automático previamente entrenado desde el disco. 
+    El modelo path es la ruta al archivo que contiene el modelo. Este modelo puede ser una 
+    red neuronal que ha sido entrenada para realizar tareas como clasificación, 
+    regresión o, en este caso, generación de texto.
+
+    \item tokenizer (\texttt{tokenizer.npy}): Aquí se carga un tokenizer, que es 
+    una herramienta que convierte texto en una secuencia de tokens o palabras. El tokenizer path 
+    es la ruta al archivo que contiene la configuración del tokenizer. Este componente es 
+    crucial porque necesitas asegurarte de que el texto de entrada al modelo esté en el mismo 
+    formato que el modelo espera, basado en cómo fue entrenado.
+
+    \item encoder (\texttt{encoder.npy}): Finalmente, se carga un encoder, específicamente 
+    un LabelEncoder, que se utiliza para convertir etiquetas categóricas en un formato 
+    numérico que el modelo puede entender y procesar. El encoder path es la ruta al archivo 
+    que contiene la  configuración del encoder.
+\end{itemize}
+
+Al final, la función devuelve los tres archivos: modelo, tokenizer, y encoder. 
+Estos son necesarios para procesar nuevos textos de entrada y generar predicciones o salida en 
+el formato adecuado. Es una función de conveniencia que agrupa las operaciones de carga en un 
+solo lugar, lo que facilita la reutilización del modelo y sus componentes asociados para la 
+generación de texto o cualquier otra tarea de NLP para la que fueron entrenados.
+
+\begin{center}
+    Selección de Palabras con Top-k Sampling
+\end{center}
+
+Top-k Sampling: Es una técnica para seleccionar palabras generadas por el modelo. En lugar de elegir siempre la palabra con la mayor probabilidad (lo que puede resultar en salidas predecibles y poco variadas), se selecciona de las k palabras más probables.
+Distribución de probabilidad: Las probabilidades de las k palabras se normalizan y se elige una palabra al azar basada en esta distribución, permitiendo variabilidad en las palabras generadas.
+
+
+\begin{center}
+    Generación de un Verso
+\end{center}
+
+Palabra inicial: Se selecciona una palabra inicial aleatoria para comenzar el verso.\\ 
+
+Generación secuencial: Para cada palabra siguiente en el verso, se crea una secuencia de palabras generadas hasta el momento, se convierte en una secuencia de enteros y se ajusta el padding según la longitud esperada por el modelo (pad sequences). \\ 
+
+Predicción y selección: El modelo predice la distribución de probabilidad de las siguientes palabras posibles. top k sampling se utiliza para seleccionar la siguiente palabra basada en esta distribución. \\ 
+
+Iteración: Este proceso se repite hasta que se completa la longitud del verso especificada.
+
+\begin{center}
+    Generación de una Estrofa
+\end{center}
+
+Estrofa: Una estrofa se compone de varios versos. Cada verso se genera utilizando la función generar verso explicada anteriormente. \\
+
+Combinar versos: Los versos generados se combinan para formar una estrofa
+
+\begin{center}
+    Generación de una Estrofa
+\end{center}
+
+Estructura del poema: Un poema puede tener una estructura predefinida, por ejemplo, una lista de tuplas que define el número de versos y la longitud de cada verso en diferentes estrofas. \\ 
+
+Generación de estrofas: Utilizando la estructura, se generan estrofas llamando repetidamente a generar estrofa.\\ 
+
+Combinar estrofas: Las estrofas se combinan con dos saltos de línea  para formar el poema completo.\\ 
