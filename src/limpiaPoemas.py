@@ -6,34 +6,52 @@ import nltk
 
 nltk.download('stopwords')
 
-# Función para cargar datos desde un archivo JSON
+# Cargamos los datos desde un archivo JSON
 def cargar_poemas(poemas_json):
     with open(poemas_json, 'r', encoding='utf-8') as archivo:
         poemas = json.load(archivo)
     return poemas
 
-# Funciones de limpieza
+# Función para convertir el texto a minúsculas
+# Esto es esencial para normalizar el texto y facilitar la comparacion de palabras
 def convertir_minusculas(texto):
     return texto.lower()
 
+# Función para eliminar caracteres especiales del texto
+# Esto ayuda a limpiar el texto de símbolos no deseados que pueden 
+#  interferir con el procesamiento del texto
 def eliminar_caracteres_especiales(texto):
     return re.sub(r'[^\w\s]', '', texto)
 
+# Función para eliminar acentos del texto
+# Normaliza el texto eliminando acentos para que las palabras con y sin 
+#  acentos se traten por igual
 def eliminar_acentos(texto):
     forma_nfkd = unicodedata.normalize('NFKD', texto)
     return "".join([c for c in forma_nfkd if not unicodedata.combining(c)])
 
+# Función para eliminar espacios extra en el texto
+# Reduce múltiples espacios a un solo espacio mejorando la consistencia del texto
 def eliminar_espacios_extra(texto):
     return " ".join(texto.split())
 
+# Función para tokenizar el texto
+# Divide el texto en una lista de palabras (tokens), lo cual es útil para 
+#  el análisis y procesamiento del text
 def tokenizar(texto):
     return texto.split()
 
+# Cargar las palabras vacias en español
+# Las palabras vacias (stopwords) son palabras comunes que no aportan mucho 
+# sigificado y se eliminan en el procesamiento del texto
 palabras_vacias = set(stopwords.words('spanish'))
 
+# Función para eliminar palabras vacias de la lista de tokens
+# Filtra las palabras vacías de los tokens para centrarse en las palabras significativas
 def eliminar_palabras_vacias(tokens):
     return [palabra for palabra in tokens if palabra not in palabras_vacias]
 
+# Función que aplica todas las funciones de limpieza en orden
 def limpiar_contenido(contenido):
     contenido = convertir_minusculas(contenido)
     contenido = eliminar_caracteres_especiales(contenido)
