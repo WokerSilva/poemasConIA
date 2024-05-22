@@ -3,77 +3,128 @@ import random
 import tensorflow as tf
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.keras.models import load_model
 from sklearn.preprocessing import LabelEncoder
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Embedding, LSTM, Dense
 
-# Cargar el modelo RNN, el tokenizador y el codificador desde archivos almacenados
-def cargar_modelo_y_datos(modelo_path, tokenizer_path, encoder_path):
-    modelo = load_model(modelo_path)  # Cargar el modelo RNN entrenado desde el archivo
-    tokenizer = cargar_tokenizer(tokenizer_path)  # Cargar el tokenizador desde el archivo
-    encoder = cargar_encoder(encoder_path)  # Cargar el codificador desde el archivo
-    return modelo, tokenizer, encoder  # Devolver el modelo, el tokenizador y el codificador
 
-# Función para muestreo con top-k, selecciona una palabra basada en las k más probables
-def top_k_sampling(prediccion, k=10):
-    indices = np.argsort(prediccion)[-k:]  # Obtener los índices de las k palabras más probables
-    valores = prediccion[indices]  # Obtener los valores de probabilidad de esas palabras
-    valores = valores / np.sum(valores)  # Normalizar los valores para que sumen 1
-    return np.random.choice(indices, p=valores)  # Elegir aleatoriamente una palabra basada en las probabilidades
+"""
+Función para entrenar una red neuronal recurrente (RNN) que genera texto a 
+partir de los poemas preprocesados.
 
-# Función para generar un verso
-def generar_verso(modelo, tokenizer, encoder, longitud_verso, k=10):
-    palabra_inicial = random.choice(list(tokenizer.word_index.keys()))  # Elegir una palabra inicial aleatoria
-    verso_generado = [palabra_inicial]  # Iniciar el verso con la palabra inicial
+Recibe:
+    poemas_limpios_path (str): Ruta del archivo que contiene los poemas ya limpios y preprocesados.
 
-    for _ in range(longitud_verso - 1):  # Generar palabras hasta alcanzar la longitud del verso
-        secuencia = tokenizer.texts_to_sequences([verso_generado])  # Convertir el verso generado en una secuencia de índices
-        secuencia_padded = pad_sequences(secuencia, maxlen=modelo.input_shape[1])  # Rellenar la secuencia para que tenga la longitud esperada por el modelo
-        prediccion = modelo.predict(secuencia_padded, verbose=0)[0]  # Obtener la predicción del modelo
-        palabra_idx = top_k_sampling(prediccion, k)  # Seleccionar la siguiente palabra usando top-k sampling
-        palabra_generada = tokenizer.index_word.get(palabra_idx, '')  # Obtener la palabra correspondiente al índice
-        if palabra_generada:
-            verso_generado.append(palabra_generada)  # Añadir la palabra generada al verso
+Devuelve:
+    tuple: Tupla que contiene el modelo RNN entrenado, el tokenizador y el 
+     codificador utilizados en el entrenamiento.
+"""
+def entrenar_rnn_generativa(poemas_limpios_path):
+    # Abrimos el archivo que contiene los poemas ya limpios y preprocesados
+    with open(poemas_limpios_path, 'r', encoding='utf-8') as file:
+        poemas_limpios = file.readlines()
 
-    return ' '.join(verso_generado).capitalize()  # Devolver el verso generado como una cadena de texto
+    # Inicializamos un tokenizador que convertirá las palabras en números unicos
+    tokenizer = Tokenizer()
+    tokenizer.fit_on_texts(poemas_limpios)
 
-# Función para generar una estrofa
-def generar_estrofa(modelo, tokenizer, encoder, num_versos, longitud_verso, k=10):
-    estrofa = [generar_verso(modelo, tokenizer, encoder, longitud_verso, k) for _ in range(num_versos)]  # Generar varios versos
-    return '\n'.join(estrofa)  # Unir los versos con saltos de línea para formar una estrofa
+    # Convertimos los poemas en secuencias de números que representan cada palabra
+    secuencias = tokenizer.texts_to_sequences(poemas_limpios)
 
-# Función para generar un poema
-def generar_poema(modelo, tokenizer, encoder, estructura, k=10):
-    poema = [generar_estrofa(modelo, tokenizer, encoder, num_versos, longitud_verso, k) for num_versos, longitud_verso in estructura]  # Generar estrofas según la estructura dada
-    return '\n\n'.join(poema)  # Unir las estrofas con doble salto de línea para formar el poema completo
+    # Calculamos el tamaño del vocabulario basado en el indice de palabras del tokenizador
+    vocab_size = len(tokenizer.word_index) + 1
 
-# Extraer las palabras más relevantes del tokenizador
-def extraer_palabras_relevantes(tokenizer, top_n=20):
-    palabras_relevantes = sorted(tokenizer.word_counts.items(), key=lambda x: x[1], reverse=True)[:top_n]  # Ordenar las palabras por frecuencia y tomar las top_n
-    return [palabra for palabra, _ in palabras_relevantes]  # Devolver solo las palabras sin las frecuencias
+    # Preparamos los datos de entrenamiento y las etiquetas correspondientes
+    X = []  # Lista para almacenar secuencias de entrada
+    y = []  # Lista para almacenar la palabra objetivo (etiqueta)
+    for secuencia in secuencias:
+        for i in range(1, len(secuencia)):
+            n_gram_sequence = secuencia[:i+1]
+            # Añadimos la secuencia de entrada.
+            X.append(n_gram_sequence[:-1]) 
+            # Añadimos la palabra objetivo. 
+            y.append(n_gram_sequence[-1])  
 
-# Guardar el tokenizador en un archivo
-def guardar_tokenizer(tokenizer, file_path):
-    with open(file_path, 'wb') as file:
-        np.save(file, tokenizer.word_index)  # Guardar el índice de palabras del tokenizador en un archivo
+    # rellenamos las secuencias para que todas tengan la misma longitud
+    max_sequence_len = max([len(seq) for seq in X])
+    X = np.array(pad_sequences(X, maxlen=max_sequence_len, padding='pre'))
+    y = np.array(y)
 
-# Cargar el tokenizador desde un archivo
-def cargar_tokenizer(file_path):
-    with open(file_path, 'rb') as file:
-        word_index = np.load(file, allow_pickle=True).item()  # Cargar el índice de palabras desde el archivo
-    tokenizer = Tokenizer()  # Crear una instancia del tokenizador
-    tokenizer.word_index = word_index  # Asignar el índice de palabras al tokenizador
-    tokenizer.index_word = {v: k for k, v in word_index.items()}  # Invertir el índice de palabras para facilitar la conversión de índices a palabras
-    return tokenizer  # Devolver el tokenizador
+    # Utilizamos LabelEncoder para convertir las etiquetas de palabras en números
+    encoder = LabelEncoder()
+    y = encoder.fit_transform(y)
 
-# Guardar el codificador en un archivo
-def guardar_encoder(encoder, file_path):
-    with open(file_path, 'wb') as file:
-        np.save(file, encoder.classes_)  # Guardar las clases del codificador en un archivo
+    # Construimos el modelo secuencial de RNN con capas de incrustación (Embedding) y LSTM.
+    model = Sequential()
+    model.add(Embedding(vocab_size, 100, input_length=max_sequence_len-1))
+    model.add(LSTM(150, return_sequences=True))
+    model.add(LSTM(150))
+    model.add(Dense(vocab_size, activation='softmax'))
 
-# Cargar el codificador desde un archivo
-def cargar_encoder(file_path):
-    with open(file_path, 'rb') as file:
-        classes = np.load(file, allow_pickle=True)  # Cargar las clases desde el archivo
-    encoder = LabelEncoder()  # Crear una instancia del codificador
-    encoder.classes_ = classes  # Asignar las clases al codificador
-    return encoder  # Devolver el codificador
+    # Compilamos el modelo con una función de perdida adecuada para 
+    #  clasificación y el optimizador Adam
+    model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+    # se entrena el modelo con los datos preparados
+    model.fit(X, y, epochs=100, verbose=1)
+
+    # Devolvemos el modelo entrenado junto con el tokenizador y el codificador.
+    return model, tokenizer, encoder
+
+
+"""
+Función para generar texto a partir de un verso inicial y un número de palabras 
+utilizando el modelo RNN entrenado
+
+Recibe:
+    modelo (tf.keras.Model): Modelo RNN entrenado para generar texto.
+    tokenizer (Tokenizer): Instancia del tokenizador utilizado en el entrenamiento.
+    verso_inicial (str): Verso inicial que servirá como punto de partida para la generación.
+    num_palabras (int): Número de palabras que se generarán después del verso inicial.
+
+Devuelve:
+    str: Texto generado como una cadena de palabras.
+"""
+def hacer_predicciones_generativas(modelo, tokenizer, verso_inicial, num_palabras):    
+    resultado = []  # Lista para almacenar las palabras generadas.
+    verso_actual = verso_inicial  # Iniciamos con el verso proporcionado por el -usuario-
+    for _ in range(num_palabras):
+        # Convertimos el verso actual en una secuencia de números.
+        secuencia = tokenizer.texts_to_sequences([verso_actual])[0]
+        # Rellenamos la secuencia para que tenga la longitud adecuada.
+        secuencia = pad_sequences([secuencia], maxlen=len(secuencia), padding='pre')
+        # Realizamos una predicción con el modelo.
+        prediccion = np.argmax(modelo.predict(secuencia), axis=-1)
+        palabra_predicha = ''
+        # Buscamos la palabra correspondiente al número predicho.
+        for palabra, index in tokenizer.word_index.items():
+            if index == prediccion:
+                palabra_predicha = palabra
+                break
+        # Añadimos la palabra predicha al verso actual y al resultado.
+        verso_actual += ' ' + palabra_predicha
+        resultado.append(palabra_predicha)
+    # Devolvemos el texto generado como una cadena de texto.
+    return ' '.join(resultado)
+
+"""
+Función que entrena un modelo RNN para generar texto y luego utiliza el modelo 
+entrenado para generar un nuevo poema a partir de un verso inicial y un 
+número de palabras especificado
+
+Args:
+    poemas_limpios_path (str): Ruta del archivo que contiene los poemas ya limpios y preprocesados
+    verso_inicial (str): Verso inicial que servirá como punto de partida para la generación del nuevo poema
+    num_palabras (int): Número de palabras que se generarán después del verso inicial
+
+Returns:
+    Se imprime el poema generado en la consola
+"""
+def ejemplo_entrenamiento_generativo(poemas_limpios_path, verso_inicial, num_palabras):
+    # Entrenamos la RNN generativa con el archivo de poemas limpios.
+    modelo_rnn_generativa, tokenizer = entrenar_rnn_generativa(poemas_limpios_path)
+
+    # Utilizamos el modelo entrenado para generar un nuevo poema.
+    nuevo_poema = hacer_predicciones_generativas(modelo_rnn_generativa, tokenizer, verso_inicial, num_palabras)
+    # Imprimimos el poema generado.
+    print(f'Nuevo poema generado: {nuevo_poema}')

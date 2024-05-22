@@ -1,6 +1,6 @@
 from limpiaPoemas import limpiar_poemas
 from entrenaRNN import entrenar_rnn, hacer_predicciones
-from generarPoema import generar_poema, extraer_palabras_relevantes, cargar_modelo_y_datos, guardar_tokenizer, guardar_encoder
+from generarPoema import ejemplo_entrenamiento_generativo, ejemplo_entrenamiento_generativo
 
 def main():
     archivo_entrada = 'poemas.json'
@@ -11,8 +11,8 @@ def main():
     modelo_rnn, tokenizer, encoder = entrenar_rnn(archivo_salida)
     
     # Guardar el tokenizer y el encoder para su uso posterior
-    guardar_tokenizer(tokenizer, 'tokenizer.npy')
-    guardar_encoder(encoder, 'encoder.npy')
+    #guardar_tokenizer(tokenizer, 'tokenizer.npy')
+    #guardar_encoder(encoder, 'encoder.npy')
     
     # Imprimir las categorías disponibles
     categorias = encoder.classes_
@@ -24,14 +24,11 @@ def main():
 
     # Generar un nuevo poema
     print("cargando...")
-    modelo_rnn, tokenizer, encoder = cargar_modelo_y_datos('modelo_poemas_rnn.keras', 'tokenizer.npy', 'encoder.npy')
-    estructura_poema = [(4, 8), (4, 6), (4, 8)]  # Estructura del poema
-    nuevo_poema_generado = generar_poema(modelo_rnn, tokenizer, encoder, estructura_poema)
-    print(f'Nuevo poema generado: {nuevo_poema_generado}')
-    
-    # Extraer palabras relevantes del conjunto de datos de entrenamiento
-    palabras_relevantes = extraer_palabras_relevantes(tokenizer)
-    print(f'Palabras relevantes: {palabras_relevantes}')
+    #modelo_rnn, tokenizer, encoder = cargar_modelo_y_datos('modelo_poemas_rnn.keras', 'tokenizer.npy', 'encoder.npy')
+
+    # Ejemplo de entrenamiento de la RNN generativa y generación de un nuevo poema
+    print("Entrenando RNN generativa...")
+    ejemplo_entrenamiento_generativo(archivo_salida, 'llueve en mi alma', 50)
 
 if __name__ == "__main__":
     main()
