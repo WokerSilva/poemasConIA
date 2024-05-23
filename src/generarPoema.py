@@ -20,10 +20,10 @@ def generar_texto_BERT(verso_inicial, num_palabras):
 
     # Generamos texto con BERT rellenando los tokens enmascarados
     with torch.no_grad():
-        outputs = model_bert.generate(tokens, max_length=num_palabras+len(tokens[0])-1, num_return_sequences=1)
+        outputs = model_bert.generate(tokens, max_length=num_palabras + len(tokens[0]) - 1, num_return_sequences=1)
 
     # Decodificamos los tokens generados
-    texto_generado = tokenizer_bert.decode(outputs[0][len(tokens[0])-1:], skip_special_tokens=True)
+    texto_generado = tokenizer_bert.decode(outputs[0][len(tokens[0]) - 1:], skip_special_tokens=True)
 
     return texto_generado
 
@@ -32,14 +32,14 @@ def entrenar_rnn_generativa(poemas_limpios_path):
     with open(poemas_limpios_path, 'r', encoding='utf-8') as file:
         poemas_limpios = file.readlines()
 
-    # Inicializamos un tokenizador que convertirá las palabras en números unicos
+    # Inicializamos un tokenizador que convertirá las palabras en números únicos
     tokenizer = Tokenizer()
     tokenizer.fit_on_texts(poemas_limpios)
 
     # Convertimos los poemas en secuencias de números que representan cada palabra
     secuencias = tokenizer.texts_to_sequences(poemas_limpios)
 
-    # Calculamos el tamaño del vocabulario basado en el indice de palabras del tokenizador
+    # Calculamos el tamaño del vocabulario basado en el índice de palabras del tokenizador
     longitud_letras = len(tokenizer.word_index) + 1
 
     # Preparamos los datos de entrenamiento y las etiquetas correspondientes
@@ -47,13 +47,13 @@ def entrenar_rnn_generativa(poemas_limpios_path):
     y = []  # Lista para almacenar la palabra objetivo (etiqueta)
     for secuencia in secuencias:
         for i in range(1, len(secuencia)):
-            n_gram_sequence = secuencia[:i+1]
+            n_gram_sequence = secuencia[:i + 1]
             # Añadimos la secuencia de entrada.
-            X.append(n_gram_sequence[:-1]) 
-            # Añadimos la palabra objetivo. 
-            y.append(n_gram_sequence[-1])  
+            X.append(n_gram_sequence[:-1])
+            # Añadimos la palabra objetivo.
+            y.append(n_gram_sequence[-1])
 
-    # rellenamos las secuencias para que todas tengan la misma longitud
+    # Rellenamos las secuencias para que todas tengan la misma longitud
     max_sequence_len = max([len(seq) for seq in X])
     X = np.array(pad_sequences(X, maxlen=max_sequence_len, padding='pre'))
     y = np.array(y)
@@ -64,34 +64,29 @@ def entrenar_rnn_generativa(poemas_limpios_path):
 
     # Construimos el modelo secuencial de RNN con capas de incrustación (Embedding) y LSTM.
     model = Sequential()
-    model.add(Embedding(longitud_letras, 100, input_length=max_sequence_len-1))
+    model.add(Embedding(longitud_letras, 100, input_length=max_sequence_len - 1))
     model.add(LSTM(150, return_sequences=True))
     model.add(LSTM(150))
     model.add(Dense(longitud_letras, activation='softmax'))
 
-    # Compilamos el modelo con una función de perdida adecuada para 
-    #  clasificación y el optimizador Adam
+    # Compilamos el modelo con una función de pérdida adecuada para clasificación y el optimizador Adam
     model.compile(loss='sparse_categorical_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-    # se entrena el modelo con los datos preparados
+    # Entrenamos el modelo con los datos preparados
     model.fit(X, y, epochs=100, verbose=1)
 
-    # Devolvemos el modelo entrenado junto con el tokenizador y el codificador.
-    return model, tokenizer, encoder
+    # Devolvemos el modelo entrenado junto con el tokenizador, el codificador y la longitud máxima de la secuencia.
+    return model, tokenizer, encoder, max_sequence_len
 
-
-def hacer_predicciones_generativas(modelo_rnn, tokenizer_rnn, modelo_bert, tokenizer_bert, verso_inicial, num_palabras):    
+def hacer_predicciones_generativas(modelo_rnn, tokenizer_rnn, max_sequence_len, verso_inicial, num_palabras):
     resultado = []  # Lista para almacenar las palabras generadas.
-    
-    # Generar texto inicial con BERT
-    texto_inicial = generar_texto_BERT(verso_inicial, num_palabras)
-    
-    verso_actual = texto_inicial  # Iniciamos con el texto generado por BERT como verso actual
+    verso_actual = verso_inicial
+
     for _ in range(num_palabras):
         # Convertimos el verso actual en una secuencia de números.
         secuencia = tokenizer_rnn.texts_to_sequences([verso_actual])[0]
         # Rellenamos la secuencia para que tenga la longitud adecuada.
-        secuencia = pad_sequences([secuencia], maxlen=len(secuencia), padding='pre')
+        secuencia = pad_sequences([secuencia], maxlen=max_sequence_len - 1, padding='pre')
         # Realizamos una predicción con el modelo de RNN.
         prediccion = np.argmax(modelo_rnn.predict(secuencia), axis=-1)
         palabra_predicha = ''
@@ -103,15 +98,15 @@ def hacer_predicciones_generativas(modelo_rnn, tokenizer_rnn, modelo_bert, token
         # Añadimos la palabra predicha al verso actual y al resultado.
         verso_actual += ' ' + palabra_predicha
         resultado.append(palabra_predicha)
-    
+
     # Devolvemos el texto generado como una cadena de texto.
     return ' '.join(resultado)
 
 def ejemplo_entrenamiento_generativo(poemas_limpios_path, verso_inicial, num_palabras):
     # Entrenamos la RNN generativa con el archivo de poemas limpios.
-    modelo_rnn_generativa, tokenizer_rnn, encoder_rnn = entrenar_rnn_generativa(poemas_limpios_path)
+    modelo_rnn_generativa, tokenizer_rnn, encoder_rnn, max_sequence_len = entrenar_rnn_generativa(poemas_limpios_path)
 
     # Utilizamos el modelo entrenado para generar un nuevo poema.
-    nuevo_poema = hacer_predicciones_generativas(modelo_rnn_generativa, tokenizer_rnn, model_bert, tokenizer_bert, verso_inicial, num_palabras)
+    nuevo_poema = hacer_predicciones_generativas(modelo_rnn_generativa, tokenizer_rnn, max_sequence_len, verso_inicial, num_palabras)
     # Imprimimos el poema generado.
     print(f'Nuevo poema generado: {nuevo_poema}')
