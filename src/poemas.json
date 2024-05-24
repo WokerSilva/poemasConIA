@@ -1,74 +1,212 @@
 [
-    {
-      "categoria": "amor",
-      "autor": "Anonimo",
-      "titulo": "Esa Voz",
-      "contenido": "esa voz que nunca desespera,\nesa que escucho,\nsusurrarme,\nme da la vida y me mata.\nesa voz busca quien la llama,\nsin ojos... sin manos,\nsolo con el alma.\nsi alguna vez la voz,\nllama a tu puerta,\nno le cierres el alma,\ntiende tus manos,\ny con los ojos abiertos.\nbesa sus labios,\ncon pasión y ternura,\ncon dolor y alegría,\nte he escuchado tanto tiempo,\ngritarme en silencio.\ncuando nuestras miradas se unan,\nya no seremos más,\ngritos del alma,\nlagrimas del silencio.\nno ha de gritar el alma,\nni llorar el silencio,\nha de reír tu boca,\ny palpitar tu cuerpo.\ncuando nuestras miradas se pierdan en el tiempo"
-    },
-    {
-      "categoria": "amor",
-      "autor": "VEGA, GARCILASO DE LA",
-      "titulo": "POR VOS MUERO",
-      "contenido": "escrito está en mi alma vuestro gesto\ny cuanto yo escribir de vos deseo:\nvos sola lo escribistes; yo lo leo\ntan solo que aun de vos me guardo en esto.\nen esto estoy y estaré siempre puesto,\nque aunque no cabe en mí cuanto en vos veo,\nde tanto bien lo que no entiendo creo,\ntomando ya la fe por presupuesto.\nyo no nací sino para quereros;\nmi alma os ha cortado a su medida;\npor hábito del alma misma os quiero;\ncuanto tengo confieso yo deberos;\npor vos nací, por vos tengo la vida,\npor vos he de morir, y por vos muero."
-    },
-    {
-      "categoria": "amor",
-      "autor": "MURES, MARIA JOSE",
-      "titulo": "SIN LETRERO",
-      "contenido": "no hay letrero\nde coto privado de caza,\npero son tuyas,\nen la piel están\ntodas las caricias,\nlas ternuras todas,\ntodas las humedades\nde tu reserva y la mía.\n\nvivir para tenerte,\nvivir esos cinco minutos,\nen donde redondeas\nmis ovillos de placer."
-    },
-    {
-      "categoria": "trizteza",
-      "autor": "ALEIXANDRE, VICENTE",
-      "titulo": "EL CUERPO Y EL ALMA",
-      "contenido": "Pero es más triste todavía, mucho más triste.\nTriste como la rama que deja caer su fruto para nadie.\nMás triste, más. Como ese vaho\nque de la tierra exhala depués la pulpa muerta.\nComo esa mano que del cuerpo tendido\nse eleva y quiere solamente acariciar las luces,\nla sonrisa doliente, la noche aterciopelada y muda.\nLuz de la noche sobre el cuerpo tendido sin alma.\nAlma fuera, alma fuera del cuerpo, planeando\ntan delicadamente sobre la triste forma abandonada.\nAlma de niebla dulce, suspendida\nsobre su ayer amante, cuerpo inerme\nque pálido se enfría con las nocturnas horas\ny queda quito, solo, dulcemente vacío.\n\nAlma de amor que vela y se separa\nvacilando, y al fin se aleja tiernamente fría."
-    },
-    {
-      "categoria": "trizteza",
-      "autor": "WIETHÜCHTER, BLANCA",
-      "titulo": "OTRA VEZ (ME HE MUERTO)...",
-      "contenido": "Me he muerto a mí misma\ny eso me conmueve sobremanera.\nVolver a preparar mi desaparición\nme consuela y me desgasta.\nPero puedo seguir la curva de mi brazo\nlo que me da la medida de mi soledad\ny puedo morderme el vientre de nuevo\nlo que enciende el sumidero\nen el que temo caer para siempre.\nAmo este mi cuerpo árido\nsin solicitud, con avaricia\nmi negro hombro infantil\nque se desplaza según el cielo\nque diseña todo invierno."
-    },
-    {
-      "categoria": "trizteza",
-      "autor": "PASTOR DIAZ Y CORBELLE, NICOMEDES",
-      "titulo": "A LA MUERTE",
-      "contenido": "Ven a mis manos de la\ntumba oscura,\nVen, laúd lastimero,\nDo Túbulo cantaba su ternura\nDando a Delia su acento postrimero.\n\nY tráeme los ayes encantados\nCon que dulce gemía,\nCuando ya con los párpados cerrados\nEn brazos de su amor desfallecía.\n\nVen, y el son de tu armónico suspiro\nSobre mi arpa vibrando,\nAl viento de las ansias que respiro\nEl fin de mi existencia preludiando.\n\nYo lloraré de un alma solitaria\nEl insaciable anhelo,\nInvocando en mi lúgubre plegaria\nEl solo bien que me reserva el cielo.\n\nYo ensalzaré tu celestial dulzura,\nMuerte consoladora.\nYo cantaré en tus brazos tu hermosura;\nNadie en el mundo como yo te adora.\n\nParece ya que en el dintel sombrío\nDe la tumba dichosa\nSiento exhalarse un delicioso frío\nQue el ardor templa de mi sed fogosa,\n\n¡Ay! accede al ansiar de un alma triste,\nMuerte que anhelé tanto,\nY en vez de esa corona que no existe\nCubra una flor no más tu negro manto...\n\nMas no... no cederás tu poderío,\nO destino inclemente,\nY contra el mármol del sepulcro mío\nCon furor ciego estrellarás mi frente.\n\nMi tierna juventud, mis padecerás,\nMi llanto no te apiada...\nMoriré, moriré, mas sin placeres;\n¡Ay! moriré sin ver a mi adorada."
-    },
-    {
-      "categoria": "trizteza",
-      "autor": "PÉREZ DE ZAMBRANA, LUISA",
-      "titulo": "¡MAR DE TINIEBLAS! DESPUES DE LA MUERTE DEL UNICO HIJO QUE ME QUEDABA",
-      "contenido": "¿Amanece? ¿tengo alma? ¿el sol alumbra\neste mar de tinieblas?\nLas altas palmas, del suplicio antiguo\nson las cruces inmensas?\n\nEl lucero del alba todavía\ntrémula centellea?\nSon losas de sepulcros en el cielo,\nlas pálidas estrellas?\n\n¿La luna, en los desiertos del vacío\nyerta se balancea?\n¿Son túmulos las nubes, y las olas\nun sudario de perlas?\n\nTriste como la sombra de la muerte\nvengo a besar las piedras\nque ocultan tus facciones adoradas\n¡oh cubierto de tierra!\n\n¡Hijo de mis entrañas! ¿en qué idioma\nte diré mi tristeza?\nMira el cáliz de acíbar, y la sangre\nque mi frente gotea.\n\nY yo sentí de la última agonía\nel temblor en mis venas,\ny sentí mi razón cerrar sus alas,\ncomo un mar que se hiela.\n\n¡Cabellos ondulados y brillantes\nque mis lágrímas besan!\n¡Y tu tan oprimida por mis labios,\nfrente pálida y tersa!\n\n¡Oh de la luna inmaculada y blanca\nencaje de azucenas!\n¡onda celeste de oro desprendida\ndel brillo de una estrella:\n\nhaced, haced ¡oh soles de la noche!\nque yo en su tumba pueda\nbesar, temblando, sus dormidos ojos,\ny a sus pies quedar muerta."
-    },
-    {
-      "categoria": "amor",
-      "autor": "HERMANOS QUINTERO, SERAFÍN Y JOAQUÍN ÁLVAREZ",
-      "titulo": "ABRIL",
-      "contenido": "Con sus nieves y aguas mil\nal invierno el sol destierra;\nsuspira alegre la tierra\ny ese suspiro es abril.\n\n¡Abril!, el primer albor\nde la mañana en el cielo;\n¡abril!, el primer anhelo;\n¡abril!, la primera flor.\n\nEl primer ímpetu ardiente\nde la vida, antes en calma;\nel primer grito en el alma;\nel primer sueño en la frente.\n\nAbril es por maravilla\nflor de eterna juventud;\nabril es fuerza y salud;\nabril sabe a manzanilla.\n\nAbril es aura que cruza\nentre flores a escoger;\nabril es una mujer,\ny una mujer andaluza.\n\nAbril ama, sueña, engríe\ncanta, bulle y alborota;\nabril es clavel que brota,\nabril es boca que ríe.\n\n¡Abril! ¿A quién no has dejado\nel recuerdo de un amor\ny las hojas de una flor\nen el libro más preciado?"
-    },
-    {
-      "categoria": "amor",
-      "autor": "GONZÁLEZ DE LEÓN, ULALUME",
-      "titulo": "ACTO AMOROSO",
-      "contenido": "Dos se miran uno al otro\nhasta que son irreales\nentonces\n\ncierran los ojos\n\ny se tocan uno al otro\nhasta que son irreales\n\nentonces\nguardan los cuerpos,\n\ny se sueñan uno al otro\nhasta que son tan reales\nque despiertan\ndos se miran"
-    },
-    {
+  {
     "categoria": "amor",
-    "autor": "Neruda, Pablo",
-    "titulo": "Poema 20",
-    "contenido": "Puedo escribir los versos más tristes esta noche.\nEscribir, por ejemplo: \"La noche está estrellada,\ny tiritan, azules, los astros, a lo lejos.\"\n\nEl viento de la noche gira en el cielo y canta.\n\nPuedo escribir los versos más tristes esta noche.\nYo la quise, y a veces ella también me quiso.\n\nEn las noches como ésta la tuve entre mis brazos.\nLa besé tantas veces bajo el cielo infinito.\n\nElla me quiso, a veces yo también la quería.\nCómo no haber amado sus grandes ojos fijos.\n\nPuedo escribir los versos más tristes esta noche.\nPensar que no la tengo. Sentir que la he perdido.\nOír la noche inmensa, más inmensa sin ella.\nY el verso cae al alma como al pasto el rocío.\n\nQué importa que mi amor no pudiera guardarla.\nLa noche está estrellada y ella no está conmigo.\n\nEso es todo. A lo lejos alguien canta. A lo lejos.\nMi alma no se contenta con haberla perdido.\n\nComo para acercarla mi mirada la busca.\nMi corazón la busca, y ella no está conmigo.\n\nLa misma noche que hace blanquear los mismos árboles.\nNosotros, los de entonces, ya no somos los mismos.\n\nYa no la quiero, es cierto, pero cuánto la quise.\nMi voz buscaba el viento para tocar su oído.\n\nDe otro. Será de otro. Como antes de mis besos.\nSu voz, su cuerpo claro. Sus ojos infinitos.\n\nYa no la quiero, es cierto, pero tal vez la quiero.\nEs tan corto el amor, y es tan largo el olvido.\n\nPorque en noches como ésta la tuve entre mis brazos,\nmi alma no se contenta con haberla perdido.\n\nAunque éste sea el último dolor que ella me causa,\ny éstos sean los últimos versos que yo le escribo."
-    },
-    {
-    "categoria": "trizteza",
-    "autor": "Vallejo, César",
-    "titulo": "Los Heraldos Negros",
-    "contenido": "Hay golpes en la vida, tan fuertes... ¡Yo no sé!\nGolpes como del odio de Dios; como si ante ellos,\nla resaca de todo lo sufrido\nse empozara en el alma... ¡Yo no sé!\n\nSon pocos; pero son... Abren zanjas oscuras\nen el rostro más fiero y en el lomo más fuerte.\nSerán tal vez los potros de bárbaros atilas;\no los heraldos negros que nos manda la Muerte.\n\nSon las caídas hondas de los Cristos del alma,\nde alguna fe adorable que el Destino blasfema.\nEsos golpes sangrientos son las crepitaciones\nde algún pan que en la puerta del horno se nos quema.\n\nY el hombre... Pobre... ¡pobre! Vuelve los ojos, como\ncuando por sobre el hombro nos llama una palmada;\nvuelve los ojos locos, y todo lo vivido\nse empoza, como charco de culpa, en la mirada.\n\nHay golpes en la vida, tan fuertes... ¡Yo no sé!"
-    },
-    {
-    "categoria": "trizteza",
-    "autor": "Bécquer, Gustavo Adolfo",
-    "titulo": "Rima LIII",
-    "contenido": "Volverán las oscuras golondrinas\nen tu balcón sus nidos a colgar,\ny, otra vez, con el ala a sus cristales\njugando llamarán.\n\nPero aquéllas que el vuelo refrenaban\ntu hermosura y mi dicha a contemplar,\naquellas que aprendieron nuestros nombres...\n¡esas... no volverán!\n\nVolverán las tupidas madreselvas\nde tu jardín las tapias a escalar,\ny otra vez a la tarde, aún más hermosas,\nsus flores se abrirán.\n\nPero aquéllas, cuajadas de rocío,\ncuyas gotas mirábamos temblar\ny caer, como lágrimas del día...\n¡esas... no volverán!\n\nVolverán del amor en tus oídos\nlas palabras ardientes a sonar;\ntu corazón, de su profundo sueño\ntal vez despertará.\n\nPero mudo y absorto y de rodillas,\ncomo se adora a Dios ante su altar,\ncomo yo te he querido...; desengáñate,\n¡así... no te querrán!"
-    }
+    "autor": "Anonimo",
+    "titulo": "Esa Voz",
+    "contenido": "esa voz que nunca desespera,\nesa que escucho,\nsusurrarme,\nme da la vida y me mata.\nesa voz busca quien la llama,\nsin ojos... sin manos,\nsolo con el alma.\nsi alguna vez la voz,\nllama a tu puerta,\nno le cierres el alma,\ntiende tus manos,\ny con los ojos abiertos.\nbesa sus labios,\ncon pasión y ternura,\ncon dolor y alegría,\nte he escuchado tanto tiempo,\ngritarme en silencio.\ncuando nuestras miradas se unan,\nya no seremos más,\ngritos del alma,\nlagrimas del silencio.\nno ha de gritar el alma,\nni llorar el silencio,\nha de reír tu boca,\ny palpitar tu cuerpo.\ncuando nuestras miradas se pierdan en el tiempo"
+  },
+  {
+    "categoria": "amor",
+    "autor": "VEGA, GARCILASO DE LA",
+    "titulo": "POR VOS MUERO",
+    "contenido": "escrito está en mi alma vuestro gesto\ny cuanto yo escribir de vos deseo:\nvos sola lo escribistes; yo lo leo\ntan solo que aun de vos me guardo en esto.\nen esto estoy y estaré siempre puesto,\nque aunque no cabe en mí cuanto en vos veo,\nde tanto bien lo que no entiendo creo,\ntomando ya la fe por presupuesto.\nyo no nací sino para quereros;\nmi alma os ha cortado a su medida;\npor hábito del alma misma os quiero;\ncuanto tengo confieso yo deberos;\npor vos nací, por vos tengo la vida,\npor vos he de morir, y por vos muero."
+  },
+  {
+    "categoria": "amor",
+    "autor": "MURES, MARIA JOSE",
+    "titulo": "SIN LETRERO",
+    "contenido": "no hay letrero\nde coto privado de caza,\npero son tuyas,\nen la piel están\ntodas las caricias,\nlas ternuras todas,\ntodas las humedades\nde tu reserva y la mía.\n\nvivir para tenerte,\nvivir esos cinco minutos,\nen donde redondeas\nmis ovillos de placer."
+  },
+  {
+    "categoria": "tristeza",
+    "autor": "ALEIXANDRE, VICENTE",
+    "titulo": "EL CUERPO Y EL ALMA",
+    "contenido": "Pero es más triste todavía, mucho más triste.\nTriste como la rama que deja caer su fruto para nadie.\nMás triste, más. Como ese vaho\nque de la tierra exhala depués la pulpa muerta.\nComo esa mano que del cuerpo tendido\nse eleva y quiere solamente acariciar las luces,\nla sonrisa doliente, la noche aterciopelada y muda.\nLuz de la noche sobre el cuerpo tendido sin alma.\nAlma fuera, alma fuera del cuerpo, planeando\ntan delicadamente sobre la triste forma abandonada.\nAlma de niebla dulce, suspendida\nsobre su ayer amante, cuerpo inerme\nque pálido se enfría con las nocturnas horas\ny queda quito, solo, dulcemente vacío.\n\nAlma de amor que vela y se separa\nvacilando, y al fin se aleja tiernamente fría."
+  },
+  {
+    "categoria": "tristeza",
+    "autor": "WIETHÜCHTER, BLANCA",
+    "titulo": "OTRA VEZ (ME HE MUERTO)...",
+    "contenido": "Me he muerto a mí misma\ny eso me conmueve sobremanera.\nVolver a preparar mi desaparición\nme consuela y me desgasta.\nPero puedo seguir la curva de mi brazo\nlo que me da la medida de mi soledad\ny puedo morderme el vientre de nuevo\nlo que enciende el sumidero\nen el que temo caer para siempre.\nAmo este mi cuerpo árido\nsin solicitud, con avaricia\nmi negro hombro infantil\nque se desplaza según el cielo\nque diseña todo invierno."
+  },
+  {
+    "categoria": "tristeza",
+    "autor": "PASTOR DIAZ Y CORBELLE, NICOMEDES",
+    "titulo": "A LA MUERTE",
+    "contenido": "Ven a mis manos de la\ntumba oscura,\nVen, laúd lastimero,\nDo Túbulo cantaba su ternura\nDando a Delia su acento postrimero.\n\nY tráeme los ayes encantados\nCon que dulce gemía,\nCuando ya con los párpados cerrados\nEn brazos de su amor desfallecía.\n\nVen, y el son de tu armónico suspiro\nSobre mi arpa vibrando,\nAl viento de las ansias que respiro\nEl fin de mi existencia preludiando.\n\nYo lloraré de un alma solitaria\nEl insaciable anhelo,\nInvocando en mi lúgubre plegaria\nEl solo bien que me reserva el cielo.\n\nYo ensalzaré tu celestial dulzura,\nMuerte consoladora.\nYo cantaré en tus brazos tu hermosura;\nNadie en el mundo como yo te adora.\n\nParece ya que en el dintel sombrío\nDe la tumba dichosa\nSiento exhalarse un delicioso frío\nQue el ardor templa de mi sed fogosa,\n\n¡Ay! accede al ansiar de un alma triste,\nMuerte que anhelé tanto,\nY en vez de esa corona que no existe\nCubra una flor no más tu negro manto...\n\nMas no... no cederás tu poderío,\nO destino inclemente,\nY contra el mármol del sepulcro mío\nCon furor ciego estrellarás mi frente.\n\nMi tierna juventud, mis padecerás,\nMi llanto no te apiada...\nMoriré, moriré, mas sin placeres;\n¡Ay! moriré sin ver a mi adorada."
+  },
+  {
+    "categoria": "tristeza",
+    "autor": "PÉREZ DE ZAMBRANA, LUISA",
+    "titulo": "¡MAR DE TINIEBLAS! DESPUES DE LA MUERTE DEL UNICO HIJO QUE ME QUEDABA",
+    "contenido": "¿Amanece? ¿tengo alma? ¿el sol alumbra\neste mar de tinieblas?\nLas altas palmas, del suplicio antiguo\nson las cruces inmensas?\n\nEl lucero del alba todavía\ntrémula centellea?\nSon losas de sepulcros en el cielo,\nlas pálidas estrellas?\n\n¿La luna, en los desiertos del vacío\nyerta se balancea?\n¿Son túmulos las nubes, y las olas\nun sudario de perlas?\n\nTriste como la sombra de la muerte\nvengo a besar las piedras\nque ocultan tus facciones adoradas\n¡oh cubierto de tierra!\n\n¡Hijo de mis entrañas! ¿en qué idioma\nte diré mi tristeza?\nMira el cáliz de acíbar, y la sangre\nque mi frente gotea.\n\nY yo sentí de la última agonía\nel temblor en mis venas,\ny sentí mi razón cerrar sus alas,\ncomo un mar que se hiela.\n\n¡Cabellos ondulados y brillantes\nque mis lágrímas besan!\n¡Y tu tan oprimida por mis labios,\nfrente pálida y tersa!\n\n¡Oh de la luna inmaculada y blanca\nencaje de azucenas!\n¡onda celeste de oro desprendida\ndel brillo de una estrella:\n\nhaced, haced ¡oh soles de la noche!\nque yo en su tumba pueda\nbesar, temblando, sus dormidos ojos,\ny a sus pies quedar muerta."
+  },
+  {
+    "categoria": "amor",
+    "autor": "HERMANOS QUINTERO, SERAFÍN Y JOAQUÍN ÁLVAREZ",
+    "titulo": "ABRIL",
+    "contenido": "Con sus nieves y aguas mil\nal invierno el sol destierra;\nsuspira alegre la tierra\ny ese suspiro es abril.\n\n¡Abril!, el primer albor\nde la mañana en el cielo;\n¡abril!, el primer anhelo;\n¡abril!, la primera flor.\n\nEl primer ímpetu ardiente\nde la vida, antes en calma;\nel primer grito en el alma;\nel primer sueño en la frente.\n\nAbril es por maravilla\nflor de eterna juventud;\nabril es fuerza y salud;\nabril sabe a manzanilla.\n\nAbril es aura que cruza\nentre flores a escoger;\nabril es una mujer,\ny una mujer andaluza.\n\nAbril ama, sueña, engríe\ncanta, bulle y alborota;\nabril es clavel que brota,\nabril es boca que ríe.\n\n¡Abril! ¿A quién no has dejado\nel recuerdo de un amor\ny las hojas de una flor\nen el libro más preciado?"
+  },
+  {
+    "categoria": "amor",
+    "autor": "GONZÁLEZ DE LEÓN, ULALUME",
+    "titulo": "ACTO AMOROSO",
+    "contenido": "Dos se miran uno al otro\nhasta que son irreales\nentonces\n\ncierran los ojos\n\ny se tocan uno al otro\nhasta que son irreales\n\nentonces\nguardan los cuerpos,\n\ny se sueñan uno al otro\nhasta que son tan reales\nque despiertan\ndos se miran"
+  },
+  {
+  "categoria": "amor",
+  "autor": "Neruda, Pablo",
+  "titulo": "Poema 20",
+  "contenido": "Puedo escribir los versos más tristes esta noche.\nEscribir, por ejemplo: \"La noche está estrellada,\ny tiritan, azules, los astros, a lo lejos.\"\n\nEl viento de la noche gira en el cielo y canta.\n\nPuedo escribir los versos más tristes esta noche.\nYo la quise, y a veces ella también me quiso.\n\nEn las noches como ésta la tuve entre mis brazos.\nLa besé tantas veces bajo el cielo infinito.\n\nElla me quiso, a veces yo también la quería.\nCómo no haber amado sus grandes ojos fijos.\n\nPuedo escribir los versos más tristes esta noche.\nPensar que no la tengo. Sentir que la he perdido.\nOír la noche inmensa, más inmensa sin ella.\nY el verso cae al alma como al pasto el rocío.\n\nQué importa que mi amor no pudiera guardarla.\nLa noche está estrellada y ella no está conmigo.\n\nEso es todo. A lo lejos alguien canta. A lo lejos.\nMi alma no se contenta con haberla perdido.\n\nComo para acercarla mi mirada la busca.\nMi corazón la busca, y ella no está conmigo.\n\nLa misma noche que hace blanquear los mismos árboles.\nNosotros, los de entonces, ya no somos los mismos.\n\nYa no la quiero, es cierto, pero cuánto la quise.\nMi voz buscaba el viento para tocar su oído.\n\nDe otro. Será de otro. Como antes de mis besos.\nSu voz, su cuerpo claro. Sus ojos infinitos.\n\nYa no la quiero, es cierto, pero tal vez la quiero.\nEs tan corto el amor, y es tan largo el olvido.\n\nPorque en noches como ésta la tuve entre mis brazos,\nmi alma no se contenta con haberla perdido.\n\nAunque éste sea el último dolor que ella me causa,\ny éstos sean los últimos versos que yo le escribo."
+  },
+  {
+    "categoria": "amor",
+    "autor": "Cabral, Facundo",
+    "titulo": "¿NO SABES DÓNDE PUSE MIS ANTEOJOS?...",
+    "contenido": "¿No sabes dónde puse mis anteojos?...\\n¡Me estoy últimamente distrayendo!...\\n¿Será por el reflejo de tus ojos\\no acaso porque estoy envejeciendo?...\\n\\n¿A ver, que te parece este poema?...\\n¿Has visto qué bonita está la tarde?...\\n¿Por qué será que todos mis esquemas\\nse rompen solamente con mirarte?...\\n\\nAmor, mi gran amor,\\nmi buen amor, mi alero.\\nAmor, mi venturero amor,\\nmaravilloso amor, te quiero.\\nEres mucho más de lo que soy\\ny hacia donde voy, cuando me voy...\\nAmor, inalterable amor,\\nmi luminoso y gran amor.\\n\\nSon muchos ya los años que toleras\\nmis horas de tristeza y alegría...\\nla dura realidad y las quimeras\\ny un amplio repertorio de manías.\\n\\nConvocas mis anhelos y mis versos,\\nmis gustos, mis amigos, mis ausencias\\ny tornas los momentos más adversos\\nen dicha, nada más con tu presencia.\\n\\nAmor, mi gran amor,\\nmi buen amor, mi alero.\\nAmor, mi venturero amor,\\nmaravilloso amor, te quiero.\\nEres mucho más de lo que soy\\ny hacia donde voy, cuando me voy...\\nAmor, inalterable amor,\\nmi luminoso gran amor."
+  },
+  {
+    "categoria": "amor",
+    "autor": "Denis, Fernando",
+    "titulo": "¿AMAZONA O WALKIRIA?",
+    "contenido": "En las orillas de tus ojos, en las orillas de los ríos, la noche trascribe tu memoria.\nYo recojo los restos de luz y de sombra y de colores que al alba me regalan los bosques.\nBajo lentamente por el canto de la llama y me detengo en la soledad de tus manos.\nEn tus manos levanto mi carpa. En tus manos leo la historia del mundo.\nTu nombre me trae los murmullos de una ciénaga remota al atardecer,\nsus fábulas envueltas en papiros de sal bajo los almendros de las playas,\nsu olor a hierba quemada por relámpagos, por crepúsculos, por salamandras.\nLos manglares gimen bajo el rastro de tu mirada, bajo el rastro de tu sueño,\nmientras la noche abreva tus caballos en un verso de Richard Wagner.\nQuiero ser testigo de tu imagen en el agua, del agua de tu desnudez invasora,\nbusco tu imagen tallada en el agua que baña los sembrados,\nlas espigas de oro viejo que a mediodía se vuelven llamas,\nlos platanales donde verdean y las nubes, los pájaros, el espino y la soledad de mi madre.\nEl cielo baja con sus rojos leopardos y con antorchas hasta tus ojos.\nYo me acerco muy lentamente al borde de tu cuerpo desnudo y brillo,\nleo la sed guerrera en tus labios luminosos, abiertos a una roja palabra\ny lleno mis cántaros vacíos con tu agua y con tus besos."
+  },
+  {
+    "categoria": "amor",
+    "autor": "Bellesi, Diana",
+    "titulo": "¿HAS MEDIDO EL TIEMPO DE TU CORAZÓN...?",
+    "contenido": "¿Has medido el tiempo de tu corazón?\nEsa rosa inmensurable que se pierde\ncada día por ausencia de mirada\npor dejarla, denegada y ganar el\ntiempo: escoria que lo pierde. Misterio\nrenovado llena la fuente al instante\nque rebosa, de la rosa nuevamente\nla conciencia. ¿Has medido el tiempo de\ntu corazón? Cuando el benteveo en su\nesplendor de siena y amarillo posa\nsus patas sobre la rama de aguacate\ny aletea: la escena es una ofrenda\nde naturaleza viva en el minúsculo\nartificio de la casa ciudadana\nLo que no es propio ni es ajeno: por música\nse revela regulado el corazón\ncomo rosa infinita a la conciencia\nEs lo que persiste aunque no lo miremos\ny aparece con el signo de lo eterno\nGracia inaudita vive en ti un poco menos\nquizás, que en el resto de las cosas vivas\ny un poco más, en la dicha de nombrarlas\nOh Señora, la sabiduría es tonta\nAcrisolado y hondo ojo del benteveo\nque llega al patio para comer la fruta\nborravino de la lantana. ¿Hubiera\npodido salvar a la lombriz que observo\nagonizar en el pico de su dueño?"
+  },  
+  {
+  "categoria": "tristeza",
+  "autor": "Vallejo, César",
+  "titulo": "Los Heraldos Negros",
+  "contenido": "Hay golpes en la vida, tan fuertes... ¡Yo no sé!\nGolpes como del odio de Dios; como si ante ellos,\nla resaca de todo lo sufrido\nse empozara en el alma... ¡Yo no sé!\n\nSon pocos; pero son... Abren zanjas oscuras\nen el rostro más fiero y en el lomo más fuerte.\nSerán tal vez los potros de bárbaros atilas;\no los heraldos negros que nos manda la Muerte.\n\nSon las caídas hondas de los Cristos del alma,\nde alguna fe adorable que el Destino blasfema.\nEsos golpes sangrientos son las crepitaciones\nde algún pan que en la puerta del horno se nos quema.\n\nY el hombre... Pobre... ¡pobre! Vuelve los ojos, como\ncuando por sobre el hombro nos llama una palmada;\nvuelve los ojos locos, y todo lo vivido\nse empoza, como charco de culpa, en la mirada.\n\nHay golpes en la vida, tan fuertes... ¡Yo no sé!"
+  },
+  {
+  "categoria": "tristeza",
+  "autor": "Bécquer, Gustavo Adolfo",
+  "titulo": "Rima LIII",
+  "contenido": "Volverán las oscuras golondrinas\nen tu balcón sus nidos a colgar,\ny, otra vez, con el ala a sus cristales\njugando llamarán.\n\nPero aquéllas que el vuelo refrenaban\ntu hermosura y mi dicha a contemplar,\naquellas que aprendieron nuestros nombres...\n¡esas... no volverán!\n\nVolverán las tupidas madreselvas\nde tu jardín las tapias a escalar,\ny otra vez a la tarde, aún más hermosas,\nsus flores se abrirán.\n\nPero aquéllas, cuajadas de rocío,\ncuyas gotas mirábamos temblar\ny caer, como lágrimas del día...\n¡esas... no volverán!\n\nVolverán del amor en tus oídos\nlas palabras ardientes a sonar;\ntu corazón, de su profundo sueño\ntal vez despertará.\n\nPero mudo y absorto y de rodillas,\ncomo se adora a Dios ante su altar,\ncomo yo te he querido...; desengáñate,\n¡así... no te querrán!"
+  },
+  {
+  "categoria": "tristeza",
+  "autor": "Ignacio Rodríguez Galván",
+  "titulo": "A LA MUERTE DE MI AMIGO",
+  "contenido": "¿Por qué, el aire surcando,\ndilatándose del bronce los sonidos;\ny sin cesar vibrando\nllegan a mis oídos\nprofundos y tristísimos gemidos?\n\n¿Por qué de muerte el canto\nen torno de ese féretro resuena?\n¿Por qué el fúnebre llanto?\n¿Por qué la amarga pena,\nlos cirios, y el clamor que el aire llena?\n\nTe miro ante mis ojos\npostrado sin aliento, amigo mío;\ny sobre tus despojos\nsu manto negro y frío\ntiende la muerte con placer impío.\n\nY en alas de querubes,\nenvuelta tu alma en esplendente velo,\ny entre rosadas nubes\ndeja el impuro suelo,\ny blandamente se remonta al cielo.\n\n¡Oh, quién te acompañara!,\ny ese mundo feliz que habitas hora\ncontigo disfrutara,\ny la paz seductora\nque, sin turbarse, en él eterno mora.\n\nEn mi patria no viera\nsangre correr por la ciudad y llanos,\ny que entre rabia fiera\nhermanos con hermanos\nhasta hundirse el puñal pugnan insanos.\n\nNi viera la perfidia\nde nación, que risueña nos abraza,\ny bramando de envidia\nluego nos amenaza\ny en su mente infernal nos despedaza.\n\nNi viera hombres malvados,\nque sin temer de Dios el alto juicio,\nde la ambición guiados\ny el deshonroso vicio,\ndespeñan mi nación al precipicio.\n\nNi con feroz despecho\nla miseria, elevándose espantosa,\ncerrar contra su pecho\nla humanidad quejosa\ny devorar sus lágrimas ansiosa.\n\nY el luto y exterminio,\nen pos del hambre descarnada y yerta,\nextender su dominio\nsobre su tierra muerta,\ny a la peste letal abrir la puerta.\n\nFeliz mi caro amigo,\nfeliz mil veces tú, que ya en el mundo\nel dolor enemigo\ncon brazo furibundo\nno rompe tus entrañas iracundo.\n\nDichoso tú, que vives\nentre el gozo, la paz, la bienandanza\ny no, cual yo, recibes\nde amor sin esperanza\nzozobras y martirios sin mudanza.\n\nY no sientes el yugo\nde la suerte pesar sobre tu cuello,\nni el hombre es tu verdugo,\nni con ansia un destello\nbuscas de la verdad, sin poder vello.\n\nCuando el mundo habitabas,\ncon la voz de amistad consoladora\nlas penas aliviabas\nde tu amigo, que ahora\nhundido en el pesar tu ausencia llora.\n\nA1 escuchar tus cantos,\ndo la razón brillaba y la poesía,\ncelestiales encantos\nmi corazón sentía,\ny en su mismo dolor se adormecía.\n\nSi a tu alma por ventura\nle es permitido descender al suelo,\ncuando la noche oscura\nme traiga el desconsuelo\nven a elevar mi pensamiento al cielo.\n\nDe mi agitado sueño\nlas escenas de horror benigno ahuyenta;\nla imagen de mi dueño\nen vez de ellas presenta,\ny haz que tu grata voz mi oído sienta."
+  },
+  {
+  "categoria": "tristeza",
+  "autor": "Gustavo Adolfo Bécquer",
+  "titulo": "ANTES QUE TÚ ME MORIRÉ",
+  "contenido": "En las entrañas ya\nel hierro llevo con que abrió tu mano\nla ancha herida mortal.\n\nAntes que tú me moriré: y mi espíritu,\nen su empeño tenaz\nse sentará a las puertas de la Muerte,\nesperándote allá.\n\nCon las horas los días, con los días\nlos años volarán,\ny a aquella puerta llamarás al cabo…\n¿Quién deja de llamar?\n\nEntonces, que tu culpa y tus despojos\nla tierra guardará,\nlavándote en las ondas de la muerte\ncomo en otro Jordán.\n\nAllí, donde el murmullo de la vida\ntemblando a morir va,\ncomo la ola que a la playa viene\nsilenciosa a expirar.\n\nAllí donde el sepulcro que se cierra\nabre una eternidad.\nTodo cuanto los dos hemos callado\nallí lo hemos de hablar."
+  },
+  {
+  "categoria": "tristeza",
+  "autor": "Manuel Magallanes Moure",
+  "titulo": "DE MIS DÍAS TRISTES",
+  "contenido": "Quedo, muy quedo penetré a tu alcoba\ny ahogando el rumor de mis pisadas.\n\nAvancé...\n\nYa la luz desfallecía.\nEl aposento sumergido estaba\nen una claridad tenue y dudosa;\ny era esa claridad así tan lánguida\ncomo la suave luz de tus pupilas\ncuando mi boca febriciente y ávida\nmuerde la dulce carne de tus labios...\nEntonces languidecen tus miradas\ncon desfallecimientos de crepúsculo.\n\nEn el limpio cristal de la ventana\nagonizan reflejos purpurinos\ny las sombras germinan en la estancia.\ncomo un florecimiento de tristezas\nen los pliegues recónditos de un alma.\n\nFlota un vago perfume... Así el perfume\nde tu alma de mujer enamorada.\nAsí tan leve, así tan vago... Acaso\neste perfume delicioso es tu alma!\n\nAcaso este perfume es el espíritu\nde aquellas pobres rosas deshojadas\nque por buscar el sol del vaso huyeron\ny sin sol se quedaron y sin agua...\nAcaso este perfume delicioso\nasí tan leve, así tan vago, es tu alma!\n\nAquí la mesa pequeñita en donde\nllorando escribes tus amantes cartas:\nallí tu traje rosa, cuya seda\nel tibio aroma de tu cuerpo guarda;\nallá en el muro, hundida en la penumbra,\nla silueta borrosa de una santa;\nacá el vacío espejo de Venecia\ncomo un pozo de sombra, y de la estancia\nen un ángulo oscuro, el blanco lecho,\ncomo un altar de albura inmaculada!\n\nDe rodillas caí junto a aquel lecho\ny convulso de amor besé la almohada,\ny el tibio aroma de tu carne virgen\nbusqué, besando las revueltas sábanas\nque ajé ardorosamente en mi locura...\n\nY hallé las dulces huellas que buscaba\ny el tibio aroma de tu cuerpo amado\nllegó hasta el fondo mismo de mi alma.\n\nY lloré de placer y de amargura,\ny amoroso besé, mordí con rabia\ny fué un delirio enorme y angustioso...\n\nTemblé.\n\nMiré en redor y mi mirada\nse hundió en la negra sombra de la noche.\n\nSentí fuego en los ojos... Eran lágrimas.\nTambaleando salí, como un demente,\ny abierta y sola se quedó tu estancia..."
+  },   
+  {
+  "categoria": "amor",
+  "autor": "FLÓREZ, JULIO",
+  "titulo": "TUS OJOS",
+  "contenido": "ojos indefinibles, ojos grandes,\ncomo el cielo y el mar hondos y puros,\nojos como las selvas de los andes:\nmisteriosos, fantásticos y oscuros.\n\nojos en cuyas místicas ojeras\nse ve el rostro de incógnitos pesares,\ncual se ve en la aridez de las riberas\nla huella de las ondas de los mares.\n\nmiradme con amor, eternamente,\nojos de melancólicas pupilas,\nojos que semejáis bajo su frente,\npozos de aguas profundas y tranquilas.\n\nmiradme con amor, ojos divinos,\nque adornáis como soles su cabeza,\ny, encima de sus labios purpurinos,\nparecéis dos abismos de tristeza.\n\nmiradme con amor, fúlgidos ojos,\ny cuando muera yo, que os amo tanto\n¡verted sobre mis lívidos despojos,\nel dulce manantial de vuestro llanto!"
+  },
+  {
+  "categoria": "amor",
+  "autor": "AGUSTINI, DELMIRA",
+  "titulo": "TUS OJOS ME PARECEN",
+  "contenido": "...tus ojos me parecen\ndos semillas de luz entre la sombra.\ny hay en mi alma un gran florecimiento\nsi en mí los fijas; si los bajas siento\ncomo si fuera a florecer la alfombra!\namor, la noche estaba trágica y sollozante.\ncuando tu llave de oro cantó en mi cerradura;\nluego, la puerta abierta sobre la sombra helante,\ntu forma fue una mancha de luz y de blancura."
+  },
+  {
+  "categoria": "amor",
+  "autor": "DEL CAMPO, ESTANISLAO",
+  "titulo": "TÚ Y YO",
+  "contenido": "el alma del que sufre es noche triste:\ntoldada está por el pesar sombrío,\ny las amargas lágrimas que vierte\nson, lucila, sus gotas de rocío\n\nhalla quien nace bajo estrella amiga,\nflorida primavera en su existencia,\ny hasta el cielo, propicio, le sonríe\ndel éter tras la clara transparencia.\ntu eres la llama que la brisa leve\nhace ondular, apenas, cariñosa;\nyo, la víctima triste de ese fuego,\nla pobre, enamorada mariposa.\n\ntú, las aguas tranquilas de tu vida\nsurcarás dando el lino al blando viento,\ncomo el céfiro corre entre las flores,\ncomo cruza la luna el firmamento."
+  },
+  {
+  "categoria": "amor",
+  "autor": "ZANDUETA MUNÁRRIZ, JOSÉ MARÍA",
+  "titulo": "TÚ ME BESAS",
+  "contenido": "tú me besas. me besas,\ncon tanta suavidad y tanto ardor...\nson tus besos caricias desmayadas\nsobre el trono ideal de mis promesas,\ndivinas oleadas\nen la dulce marea del amor.\n\n¡oh lentas explosiones!\n¡oh caricias audaces del placer!\nfuego inmortal, que fulge, se derrama\ny abrasando de amor los corazones\narde como una llama\nen tus labios sensuales de mujer.\n\nbésame dulcemente,\nporque me muero de felicidad\nlibando entre tus labios ideales,\nlentamente, querida, lentamente,\nel néctar de tus labios celestiales,\nllenos de amor, de luz, de suavidad"
+  },
+      {
+  "categoria": "amor",
+  "autor": "HERNÁNDEZ, LUIS",
+  "titulo": "ROMANCE",
+  "contenido": "o el viento\nque anima las sinfonías\nde mendelssohn del\ny un lenguaje cautivo\ny el amor\nque bajo el sol\nalumbra de dorado. esta\nes la historia del planeta\ntierra y los corazones\nque entre su pasto\npalpitaron viendo caer\nel otoño\ny la música de primavera"
+},
+{
+  "categoria": "amor",
+  "autor": "FERNÁNDEZ RETAMAR, ROBERTO",
+  "titulo": "POR PRIMERA VEZ",
+  "contenido": "en países y más países,\ncasas, hoteles, embajadas,\nsuelos, hamacas, autos, tierra,\nrodeados de agua o sobre el lino.\n\nolor de desnudez primera.\nvasija de arcilla sonora.\nsorprendente, augusta, profunda.\ncamanances, colinas, bosques.\n\ncomo leones, como santos.\nlo antiguo, lo simple, lo súbito.\nla plegaria, el descubrimiento.\nla conquista, la reconquista.\nel relámpago de ojos de humo.\n\ncada desgarradura sólo\npara encenderse con más fuego,\ncon más seguridad de aurora.\nya él no puede perderla más.\nya la perdió toda una vida.\nahora de nuevo y para siempre\nva a amarla por primera vez."
+},
+  {
+  "categoria": "tristeza",
+  "autor": "PARRA, JOSEFA",
+  "titulo": "CONTAGIO",
+  "contenido": "he bebido esta tarde la tristeza de un cuerpo,\nsu peso, su evidencia,\nsu impotencia de carne que quisiera ser sueño,\nesa mortalidad que lo delata\nincluso en el recuerdo.\nme ha contagiado un cuerpo de nieve su dolencia\ny ando por tanto exceso\nagotada, rendida, con apenas las fuerzas\npara arrastrar la piel y la mirada\nlejos de su influencia."
+},
+{
+  "categoria": "tristeza",
+  "autor": "ORTIZ, CECILIA",
+  "titulo": "DE PIEDRA",
+  "contenido": "estamos hechos de piedra, sin memoria ni lágrimas\nnos cubre la nieve, cómplice del aire.\nnada perturba la arena fría del alma.\nel agua crece y el mar oscuro devora la esperanza.\nlos ojos grandes, los pies chiquitos.\nla fiebre que interroga a la plegaria.\nno hay raíces aferradas y crece la pesadilla del agua.\nel mañana es la versión celeste de las sombras.\nla cosecha era una hermosa palabra.\nun hombre se diluye en la canoa por un camino de sol.\n-rubias estrías sobre la lluvia estancada-\nlas casas levantan los techos con sus manos ajadas\npasa el río corriendo desbocado.\nno hay ojos ni manos que contengan la rabia.\nsomos una raza de piedra que llora lágrimas de cuarzo.\n\nen la noche el agua crece, no sirven las ligaduras del llanto.\n-sirve eso que todavía nos falta-\nuna raza de piedra se hundirá callada.\nconozco el epitafio.\nel arca va y viene meciéndose en el polvo\nel ave abrirá sus alas sobre el faro\nlas manos dibujadas, el enigma a descifrar.\nla historia nombrará un pueblo caído desde el cielo.\nraza de piedra. llanto de cuarzo.\nangustia arcana. tristeza.\nuna gran tristeza.\nel agua apagará siempre el fuego\nel mar borrará los castillos en la playa\nmañana otra arena, otras chispas\ndistintas voces, una nueva raza."
+},
+{
+  "categoria": "tristeza",
+  "autor": "NOVO, SALVADOR",
+  "titulo": "DILUVIO",
+  "contenido": "espaciosa sala de baile\nalma y cerebro\ndos orquestas, dos,\nbaile de trajes,\nlas palabras iban entrando,\nlas vocales daban el brazo a las consonantes.\nseñoritas acompañadas de caballeros\ny tenían trajes de la edad media\ny de muchísimo antes\ny ladrillos cuneiformes\npapiros, tablas,\ngama, delta, ómicron,\npeplos, vestes, togas, armaduras,\ny las pieles bárbaras sobre las pieles ásperas\ny el gran manto morado de la cuaresma\ny el color de infierno de la vestidura de dante\ny todo el alfalfar castellano,\nlas pelucas de muchas julietas rubias\nlas cabezas de iokanaanes y marías antonietas\nsin corazón ni vientre\ny el príncipe esplendor\nvestido con briznas de brisa\ny una princesa monosilábica\nque no era ciertamente madame butterfly\ny un negro elástico de goma\ncon ojos blancos como incrustaciones de marfil.\ndanzaban todos en mí\ncogidos de las manos frías\nen un antiguo perfume apagado\ntenían todos trajes diversos\ny distintas fechas\ny hablaban lenguas diferentes.\n\ny yo lloré inconsolablemente\nporque en mi gran sala de baile\nestaban todas las vidas\nde todos los rumbos\nbailando la danza de todos los siglos\ny era, sin embargo, tan triste\nesta mascarada!\nse ha clausurado mi sala de baile\nmi corazón no tiene ya la música de todas\nlas playas\nde hoy más tendrá el silencio de todos los siglos."
+},
+{
+  "categoria": "tristeza",
+  "autor": "R. A.-VALDÉS, EMMA-MARGARITA",
+  "titulo": "FRIALDAD EXTRAÑA",
+  "contenido": "en frío, lentamente, sin piedad,\nsabiendo mi agonía y mi dolor,\ncomo algo natural, segó mi amor\nla mano que besé por su bondad.\n\nse llevó mi confianza, mi heredad,\ny dejó un hueco helado en mi interior,\narrancó ese entusiasmo, ese candor\nque no conoce engaño ni maldad.\n\nen gélida mañana, la traición,\ncon ponzoñosas uñas de alimaña,\nsurcó mi cuerpo trémulo y baldío.\n\nsólo crece cizaña. sin pasión,\nsin amor, sin dolor, nada me daña.\n¡cómo añoro mi ardor!. ¡odio este frío!"
+},
+{
+  "categoria": "tristeza",
+  "autor": "MOLINA, ENRIQUE",
+  "titulo": "LA ARENA",
+  "contenido": "blanca, consumida por la alquimia y la sal,\ntendida en su lecho virgen bajo las alas de la luna\ndeja caer su velo de novia\npara cubrir al señor de los náufragos.\ny no olvides que también es mortaja.\n\ntortúrame, arena,\ncon el auto de fe del sol en la bahía,\narráncame frente al océano mi última confesión.\nlabios sin dogma\nal pie de la escollera de terribles piedras donde\nel mar estalla.\nvienes de muy lejos como la sangre,\ntu amor seduce ciertas almas,\ngiran en el viento,\nasumen el temblor del cangrejo acosado en su cueva.\n\ntu tesoro son conchillas trizadas y tu leche es árida\ncomo hueso. despojos\nde la sístole y la diástole del salvaje corazón marino.\n\nsedienta del agua que te castiga brilla como un\nincendio\nel oro de tus caderas de odalisca.\n\ntumba o promesa de grandes placeres de la\nintemperie, pero tan pérfidamente\nseductora\npara que alguien, sobre tu superficie, reverberante y\nunánime,\nescriba con un dedo la palabra \"adiós\" y un nombre que\nse borra."
+},
+{
+  "categoria": "tristeza",
+  "autor": "ROBLEDO ORTIZ, JORGE",
+  "titulo": "LA MUJER IMPOSIBLE",
+  "contenido": "bella como la noche y como ella insegura\nla mujer imposible llegó a mi corazón.\ntenía en la mirada un poco de amargura\ny tal vez un poquito de menos ilusión.\n\nno dije una palabra. respeté la ternura\nque sellaba sus labios a toda confesión.\nuna anillo de llanto suplía en su cintura\nla vanidad coqueta del fino cinturón.\n\nsu voz era la misma. un poco más callada\ncomo si presintiera que estaba la alborada\nreuniendo silencios para poder nacer.\n\nno adelanté un reproche. no quise interrogarla\ny comprendí que el llanto que estaba por llamarla\njamás a mi cariño la dejaría volver."
+},
+{
+  "categoria": "tristeza",
+  "autor": "HUGO, VÍCTOR",
+  "titulo": "LA TUMBA Y LA ROSA",
+  "contenido": "la tumba dijo a la rosa:\n-¿dime qué haces, flor preciosa,\nlo que llora el alba en ti?\n\nla rosa dijo a la tumba:\n-de cuanto en ti se derrumba,\nsima horrenda, ¿qué haces, di?\n\ny la rosa:-¡tumba oscura!\nde cada lágrima pura\nyo un perfume hago veloz.\n\ny la tumba:-¡rosa ciega!\nde cada alma que me llega\nyo hago un ángel para dios."
+},
+{
+  "categoria": "tristeza",
+  "autor": "BON IVER",
+  "titulo": "PERFUME",
+  "contenido": "soy el unico de mi madre\nes suficiente\nllevo mi prenda para que se note.\nahora lo sabes\nsólo el amor es todo granate\nplumas pegajosas en un canal\nel cielo es el útero y ella es la luna.\nsoy mi madre en la pared, con todos nosotros.\nme muevo en el agua, de orilla a orilla\nnada mas\nsólo el amor es todo granate\nlamiendo lagos como somorgujos recelosos\ndejar quemaduras de cuerda\ncolorete rojizo\nsólo el amor es todo granate\nplumas pegajosas en un canal\nel cielo es el útero y ella es el moo."
+},
+{
+  "categoria": "amor",
+  "autor": "Pedro Antonio de Alarcón",
+  "titulo": "A MI MUJER",
+  "contenido": "Dedicatoria\n\nEl que va tras flores halla espinas\nEl que va tras espinas halla flores\n\n- I -\n\nEntre incesantes,\nimprovisas fiestas,\n¡cuán presto pasa el suspirado día\nque bulliciosa turba en las florestas\nconsagrara al amor y la alegría!\n¡Cuán presto!... Ved. -La tarde moribunda\nlos párpados entorna en Occidente,\ne inadvertida oscuridad profunda\nva envolviendo al tropel indiferente...\nMelancólico al fin lejos resuena\nel toque de oración, eco de un mundo\nque a Dios acude en su constante pena,\ny, tétrica y medrosa,\nla antes alegre turba bulliciosa\nregresa a sus hogares\ny al cotidiano afán de sus pesares.\n\n¡Pasó, y no volverá! ¡Pasó aquel día\nde vano aturdimiento y de locura\nque les dispuso en la enramada umbría\nel genio del placer y la hermosura!\n-Helos tornar entre la sombra oscura...\n¡Feliz aquel que vuelve aprisionado\nen las redes de amor, y enamorada\nve a la prenda querida que a su lado\nsuspira por la luz de una mirada!\nPero, de tantas descuidadas risas,\nde la danza frenética y del canto,\nde los besos fiados a las brisas,\n¿qué más le resta que mortal quebranto\nal que en su pobre corazón vacío\ntan sólo siente el gotear del llanto\nque lento infiltra el implacable hastío?\n\n- II -\n\nAsí tornaba yo de los pensiles\nde mis años floridos, contemplando\ncómo aquellos quiméricos abriles\nvinieron y se fueron tan callando.\nSoñando entré en mis años juveniles;\nsoñando los pasé; salí soñando...\ny al despertar entonces me veía\nsolo, en la noche de un soñado día.\n\nDetrás de mí, cerrada y misteriosa\nquedaba, ya distante, una arboleda,\ncuyas ramas mil veces cariñosa\nmeció para arrullarme el aura leda...\n¡Era mi juventud! -Triste y oscura,\ncomo negra alameda\nplantada entre una y otra sepultura,\nya al lejos la enramada aparecía...\n¡Allí quedaba la corriente pura\nque bullir entre céspedes veía;\nallí la senda abierta entre las flores;\nallí la sombra que gustar solía,\ny el trino de los tiernos ruiseñores;\nque nunca más ¡ay triste! ¡escucharía!...\n\nLa edad cruel en tanto me empujaba\npor áridos senderos:\n-¿Adónde caminaba?-\n¡Sólo el recuerdo inútil me quedaba\nde mis años primeros!\n¡El recuerdo no más!... -¡Oh vil memoria,\ncómplice fiera del ajeno olvido!\n¿Qué me valía la pasada historia,\nsi era ya el corazón desierto nido?\n¿A qué hablar de las aves pasajeras,\nque huyeron hacia nuevas primaveras\nal árbol en que ayer su amor cantaron?\n¡Qué valen a las áridas praderas\nlas flores que sin fruto se secaron?\n\n¡Fueron ¡ay! mis estériles venturas\nleves nubes del cielo,\ncuyas mudables tintas y figuras\narrastra el aire en su callado vuelo!\nY mis ídolos fueron sueños míos,\nque yo, insensato, apellidé querubes;\ny a merced de mis propios desvaríos,\nmudaron nombre y forma y atavíos,\ncomo a merced del sol cambian las nubes.\n\nMuerto en mi cielo el luminar del día,\nborrados de mis sueños los antojos,\nhuérfano el corazón, solo y sin guía,\nbreñas y abismos viendo ante mis ojos,\n¿cómo arrostrar la pedregosa vía,\ncubierta de malezas y de abrojos?\n¿A qué existir? ¿A qué tan cruda guerra,\nsi era un desierto para mí la tierra?\nEn la dorada copa de la vida,\nde grato néctar por el cielo henchida,\nno quedaba ya más que la hez amarga\ny el veneno fatal de la experiencia...\n¿Qué hacer de mi existencia?\n¿Vivir... para morir? ¡Imbécil carga!\n¿Esperar? ¿Merecer? ¡Atroz violencia!\n¡Cáncer cuyos dolores nunca embarga\nel bálsamo eficaz de la paciencia!\n\n- III -\n\nImagínate ahora, esposa mía,\n-tú, a quien mi alma reverente canto\nen estos versos tímidos te envía,-\nque, en tanta soledad y duelo tanto,\ncuando más tenebroso mi camino\nera y más triste mi ignorado llanto,\nhubiese visto en el confín del cielo\nalzarse blanca, pura, misteriosa,\nla bienhechora luna tras un monte,\nesclareciendo con su faz radiosa\nla densa lobreguez de mi horizonte.\nImagínate el gozo con que viera\ninundarse de luz la ingente esfera,\nreaparecer el mundo ante mis ojos,\ny en medio de los ásperos abrojos,\nserpentear la senda ya perdida...\nasí como del alma agradecida\nla emoción y contento\nal verse acompañada y asistida\nde la casta deidad del firmamento.\n\nIdólatra o amante,\nfijos mis ojos en aquel semblante\nque una paz inmortal me prometía,\nhubiérale sin duda abierto el alma,\ndiciéndole: «Pon fin a aquesta guerra,\n»y apártame por siempre de la tierra,\n»tú que del cielo vives en la calma.\n»Llévame de este mundo y de esta vida\n»a otro mundo mejor donde las flores\n»no desparezcan en veloz huida\n»al soplo de los vientos bramadores.\n»¡Háblame de delicias inmortales;\n»cuéntame las grandezas de esa altura;\n»que vivos en mi alma los raudales\n»aún están de la fe y de la ternura!». \n\nTal hubiérale dicho yo a la Diosa,\nal verla aparecer... Mas no era ella:\nno fue la luna la deidad radiosa\nque allí me apareció... -¡Cuánto más bella\ny cándida y piadosa,\na mis ojos lució gentil doncella!...\n-Pero mis labios sella\nese rubor que en tu mejilla casta\nme suplica modesto que no siga...\nNo temas. -Yo también ¡oh dulce amiga!\ntiemblo y bendigo y enmudezco... -Basta.\n\n- IV -\n\n¿Ni a qué más? ¿Por ventura, al dedicarte\nestas desaliñadas poesías,\nfatuas de inspiración, mofa del arte,\ncosecha ingrata de los tristes días\nque viví sin amarte,\nfuera noble que gárrulas excusas\nte diese, como suelen los conversos,\nsobre la varia multitud de Musas\nque verás invocadas en mis versos?\nNo: ni fuera cortés (y lo pasado\nmerece cuando menos cortesía)\nrenegar a la postre de ese coro,\nayer tan celebrado,\nque vaga entre una y otra poesía,\n¡ni tu propio decoro\nsemejante hecatombe aceptaría!\n\n¡Baste decir que para ti he reunido\néstas que llamaré marchitas flores\ndispersas por el viento del olvido,\ny que en todas cantara tus amores...\nsi primero te hubiera conocido!"
+},
+{
+  "categoria": "amor",
+  "autor": "Arturo Borja",
+  "titulo": "A MISTERIA",
+  "contenido": "¡Oh, cómo te miraban las tinieblas,\ncuando ciñendo el nudo de tu abrazo\na mi garganta, mientras yo espoleaba\nel formidable ijar de aquel caballo,\ncruzábamos la selva temblorosa\nllevando nuestro horror bajo los astros!\nEra una selva larga, toda negra:\nla selva dolorosa cuyos gajos\nechaban sangre al golpe de las hachas,\ncomo los miembros de un molusco extraño.\nEra una selva larga, toda triste,\ny en sus sombras reinaba nuestro espanto.\nEl espumante potro galopaba\nmojando de sudores su cansancio,\ny ya hacía mil años que corría\npor aquel bosque lúgubre. Mil años!\nY aquel bosque era largo, largo y triste,\ny en sus sombras reinaba nuestro espanto.\nY era tu abrazo como un nudo de horca,\ny eran glaciales témpanos tus labios,\ny eran agrios alambres mis tendones,\ny eran zarpas retráctiles mis manos,\ny era el enorme potro un viento negro\nfurioso en su carrera de mil años.\n\nCaímos a un abismo tan profundo\nque allí no había Dios: montes lejanos\nlevantaban sus cúspides, casqueadas\nde nieve bajo el brillo de los astros,*"
+},
+{
+   "categoria": "familia",
+   "autor": "Roberto Fernández Retamar",
+   "titulo": "A MIS HIJAS",
+   "contenido": "Hijas: muy poco les he escrito,\ny hoy lo hago de prisa.\nQuiero decirles\nque si también este momento pasa\ny puedo estar de nuevo con ustedes,\nen el sillón, oyendo el radio,\ncómo vamos a reírnos de estas cosas,\nde estos versos y de estas botas,\ny de la cara que ponían algunos,\ny hasta del traje que ahora llevo.\n\nPero si esto no pasa,\ny no hay sillón para estar juntos,\ny no vuelven las botas,\nsepan que no podía\nactuar de otra manera.\nEstén contentas de ese nombre\nque arrastran como un hilo\npor papeles.\nDisfruten de estar vivas,\nque es cosa linda,\ncomo nosotros lo hemos disfrutado.\nQuieran mucho las cosas.\nY recuérdenme alguna vez,\ncon alegría."
+}
 ]

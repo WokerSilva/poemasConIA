@@ -1,5 +1,8 @@
 python versión: Python 3.10.12
 
+pip install --upgrade pip
+pip install tensorflow
+
 instalar: 
 
 pip install absl-py
